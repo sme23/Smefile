@@ -1,0 +1,14 @@
+#ifndef JEDAH_INSTALLED
+	#define JEDAH_INSTALLED
+
+	#include "JedahMode.lyn.event"
+
+	IsJedahList: //list of people who are jedah
+		BYTE ONeill //For today, O'Neill gets to be Jedah
+		BYTE 0 //termimator
+
+	#ifndef USE_FE2_JEDAH
+		#define USE_FE15_JEDAH
+	#endif // USE_FE2_JEDAH
+
+#endif // JEDAH_INSTALLED

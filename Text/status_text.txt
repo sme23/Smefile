@@ -1,0 +1,41 @@
+## EnfeebleName
+Feeble[X]
+
+## EnfeebleDesc
+Oof.... So heavy...[N]
+Stats are lowered...[X]
+
+## HexingRodStatusName
+Hexed[X]
+
+## HexingRodStatusDesc
+You've been hexed![N]
+Max HP is halved![X]
+
+## FreezeStatusName
+Frozen[X]
+
+## FreezeStatusDesc
+Brr! Too...cold![N]
+Can't...move![X]
+
+## RegenStatusName
+Regen[X]
+
+## RegenStatusDesc
+Ahh! Invigorating![N]
+Heal some every turn![X]
+
+## HasteStatusName
+Haste[X]
+
+## HasteStatusDesc
+I feel so light![N]
+Move twice per turn![X]
+
+## SlowStatusName
+Slow[X]
+
+## SlowStatusDesc
+I feel so heavy... Enemies[N]
+will always attack twice.[X]

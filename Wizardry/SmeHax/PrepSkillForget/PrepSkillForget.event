@@ -1,0 +1,13 @@
+
+#include "ProcDefinitions.txt"
+
+PUSH
+	ORG $99E48
+		jumpToHack(PrepSkillForget)
+POP
+
+#include "PrepSkillForget.lyn.event"
+
+
+
+

@@ -1,0 +1,70 @@
+#ifndef MORE_SHOP_MUSIC_INSTALLED
+#define MORE_SHOP_MUSIC_INSTALLED
+
+//0xB4BF8
+
+PUSH
+	ORG 0xB4BF8
+		jumpToHack(MoreShopMusic) //0x8 bytes
+		WORD 0 0 0 0 0
+POP
+
+#include "MoreShopMusic.lyn.event"
+
+#define InitializeShopSongTable "ORG (currentOffset+256)"
+#define InitializeshopChapterPointerTable "ORG (currentOffset+1024)"
+#define SetShopSong(songTable,shopType,songID) "PUSH; ORG (songTable+shopType); BYTE songID; POP"
+#define SetSongChapterPointer(chapterID,songTable) "PUSH; ORG (ShopChapterPointerTable+(chapterID*4)); POIN songTable; POP"
+
+#define ArmoryShopType 0
+#define VendorShopType 1
+#define SecretShopType 2
+
+
+ShopChapterPointerTable:
+InitializeshopChapterPointerTable
+
+SetSongChapterPointer(0,ShopSongTable)
+SetSongChapterPointer(1,ShopSongTable)
+SetSongChapterPointer(2,ShopSongTable)
+SetSongChapterPointer(3,ShopSongTable)
+SetSongChapterPointer(4,ShopSongTable)
+SetSongChapterPointer(5,ShopSongTable)
+SetSongChapterPointer(6,ShopSongTable)
+SetSongChapterPointer(7,ShopSongTable)
+SetSongChapterPointer(8,ShopSongTable)
+SetSongChapterPointer(9,ShopSongTable)
+SetSongChapterPointer(10,ShopSongTable)
+SetSongChapterPointer(11,ShopSongTable)
+SetSongChapterPointer(12,ShopSongTable)
+SetSongChapterPointer(13,ShopSongTable)
+SetSongChapterPointer(14,ShopSongTable)
+SetSongChapterPointer(15,ShopSongTable)
+SetSongChapterPointer(16,ShopSongTable)
+SetSongChapterPointer(17,ShopSongTable)
+SetSongChapterPointer(18,ShopSongTable)
+SetSongChapterPointer(19,ShopSongTable)
+SetSongChapterPointer(20,ShopSongTable)
+SetSongChapterPointer(21,ShopSongTable)
+SetSongChapterPointer(22,ShopSongTable)
+SetSongChapterPointer(23,ShopSongTable)
+SetSongChapterPointer(24,ShopSongTable)
+SetSongChapterPointer(25,ShopSongTable)
+SetSongChapterPointer(26,ShopSongTable)
+SetSongChapterPointer(27,ShopSongTable)
+SetSongChapterPointer(28,ShopSongTable)
+SetSongChapterPointer(29,ShopSongTable)
+SetSongChapterPointer(30,ShopSongTable)
+SetSongChapterPointer(31,ShopSongTable)
+SetSongChapterPointer(32,ShopSongTable)
+
+ShopSongTable:
+InitializeShopSongTable
+
+SetShopSong(ShopSongTable,ArmoryShopType,Armories)
+SetShopSong(ShopSongTable,VendorShopType,Shops)
+SetShopSong(ShopSongTable,SecretShopType,Shops)
+SetShopSong(ShopSongTable,3,Comrades)
+
+
+#endif // MORE_SHOP_MUSIC_INSTALLED

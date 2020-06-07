@@ -1,0 +1,19 @@
+#ifndef SHOP_UNIT_INSTALLED
+#define SHOP_UNIT_INSTALLED
+
+#include "MoreShops.event"
+//unit shop stuff
+#include "ShopUnit.lyn.event"
+
+ALIGN 4
+ShopUnitList:
+BYTE Ephraim
+BYTE 0
+
+ALIGN 4
+ShopUnitShopList:
+SHLI IronSword Fire Vulnerary
+ALIGN 4
+
+
+#endif // SHOP_UNIT_INSTALLED

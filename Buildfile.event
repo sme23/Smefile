@@ -1,0 +1,21 @@
+#include "EAstdlib.event"
+#include "Extensions/Hack Installation.event"
+#include "_Definitions.event"
+#include "_CONFIG.event"
+
+ORG FreeSpace
+
+//Text
+#include "Text/Install Text Data.event"
+
+
+//Tables
+#include "Tables/Table Installer.event"
+
+
+//Wizardry
+#include "Wizardry/MasterWizardryInstaller.event"
+
+
+//Test Map
+#include "TestMap/TestMapInstaller.event"

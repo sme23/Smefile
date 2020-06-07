@@ -1,0 +1,65 @@
+#include "_FE8EssentialFixes.event"
+
+PUSH
+  // Debug Startup Screen
+  #ifdef __DEBUG__
+    ORG 0x000AD8   // this is somewhere in the startup routine
+      BL(0x01C090) // Call the debug startup menu
+  #endif
+
+ORG FreeSpaceBLRange
+	#include "ExternalHacks/StrMagSplit/BLRange.event"
+
+POP
+
+
+
+// Icon Rework by Stam
+#include "DependencyHacks/IconRework/IconRework.event"
+
+// Item Effect Revamp by Teraspark
+#include "DependencyHacks/ItemEffectRevamp/IERevamp_Installer.event"
+
+// Item Range Fix by Tequila/Lord Reyson/Teraspark
+#include "DependencyHacks/ItemRangeFix/ItemRangeFix.event"
+
+// Negative Stat Boosts by circleseverywhere
+#include "DependencyHacks/NegativeStatBoosts/NegativeStatBoosts.event"
+
+// Popup Rework by Stan
+#include "DependencyHacks/PopupRework/PopupRework.event"
+
+// Debuffs by Colorz, with additions by circleseverywhere and Kirb
+#include "DependencyHacks/Debuffs/Debuffs.event"
+
+// Unit Action Rework
+#include "DependencyHacks/UnitActionRework"
+
+// Fix Gaining WExp if current is 0
+#include "DependencyHacks/FixWpnRnk.event"
+
+
+
+//All my stuff is installed from here
+#include "SmeHax/SmeHaxInstaller.event"
+
+
+
+// Str Mag Split by a whole lotta people
+#include "CompatibilityHacks/StrMagSplit/_MasterAsmInstaller.event"
+
+// HP Bars by circleseverywhere, with additions by Tequila
+#include "CompatibilityHacks/HpBars/HpBars.event"
+
+
+
+// Modular Hooks by Tequila, Snakey, Stan
+#include "ModularHooks/CalcLoops/CalcLoops.event"
+#include "ModularHooks/GrowthGetters/GrowthGetters.event"
+#include "ModularHooks/StatGetters/_InstallStatGetters.event"
+
+
+#include "UnitMenu/UnitMenu.event"
+
+
+#include "DependencyHacks/Popups.event"

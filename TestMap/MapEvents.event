@@ -1,0 +1,120 @@
+
+EventPointerTable(0x7, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN PlayerUnits PlayerUnits
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Vendor(ShopItems,6,2)
+Armory(ArmoryItems,5,2)
+Village(0x8,VillageEvent,8,3)
+House(0,HouseEvent,4,2)
+Seize(25,6)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+PlayerUnits:
+UNIT Eirika  EirikaLord 0x1 	Level(10,Ally,0)   	[12,4]  0b 0x0 0x0 0x0 [SharpClaw,0x0,0x0,0x0] NoAI
+UNIT Ephraim  EphraimLord 0x1 	Level(10,Ally,0)  	[11,5]  0b 0x0 0x0 0x0 [0x14,0x99,0x88,0x0] NoAI
+UNIT Seth  Paladin 0x1 			Level(10,Ally,0)    [10,6]  0b 0x0 0x0 0x0 [0x1,0x7B,0x0,0x0] NoAI
+UNIT Gilliam  Knight 0x1 		Level(10,Ally,0)  	[12,6]  0b 0x0 0x0 0x0 [0x14,0x65,0x88,0x0] NoAI
+UNIT Franz  Cavalier 0x1 		Level(10,Ally,0)    [10,4]  0b 0x0 0x0 0x0 [0x1,0x65,0x88,0x0] NoAI
+UNIT Moulder  Bishop 0x1 		Level(10,Ally,0) 	[9,5]   0b 0x0 0x0 0x0 [Heal,GoldGem,Rescue,BlackGem] NoAI
+UNIT Vanessa  PegasusKnight 0x1 Level(10,Ally,0) 	[5,5]   0b 0x0 0x0 0x0 [0x14,0x67,0x88,0x0] NoAI
+UNIT Ross  Pirate 0x1 			Level(10,Ally,0)    [8,6]   0b 0x0 0x0 0x0 [0x1F,0x64,0x88,0x0] NoAI
+UNIT Neimi  Ranger_F 0x1 		Level(10,Ally,0)   	[8,4]   0b 0x0 0x0 0x0 [0x2D,0x66,0x88,0x0] NoAI
+UNIT Colm  Rogue 0x1 			Level(10,Ally,0)    [7,5]   0b 0x0 0x0 0x0 [0x1,0,0,0x0] NoAI
+UNIT Garcia  Fighter 0x1 		Level(10,Ally,0)  	[6,4]   0b 0x0 0x0 0x0 [0x1F,0x64,0x88,0x0] NoAI
+UNIT Innes  Sniper 0x1 			Level(10,Ally,0)   	[6,6]   0b 0x0 0x0 0x0 [0x2D,0x0,0x0,0x0] NoAI
+UNIT Lute  Sage_F 0x1 			Level(10,Ally,0)    [9,7]   0b 0x0 0x0 0x0 [0x38,0,0,0x0] NoAI
+UNIT Tethys  Dancer 0x1 		Level(10,Ally,0) 	[11,7]  0b 0x0 0x0 0x0 [0x7D,0x7E,0x7F,0x80] NoAI
+UNIT Cormag WyvernRider 0x1 	Level(10,Ally,0)  	[7,7]  	0b 0x0 0x0 0x0 [0x14,0x67,0x88,0x0] NoAI
+UNIT
+
+EnemyUnits:
+UNIT ONeill Fighter 0x40 		Level(10,Enemy,1)   [17,4]  0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
+UNIT Breguet EirikaLord 0x40 	Level(10,Enemy,1)   [20,2] 	0 0 0 0 [SteelLance, Javelin] AttackInRangeAI
+UNIT Bone Brigand 0x40 			Level(10,Enemy,1)   [19,7] 	0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
+UNIT Bazba Brigand 0x40 		Level(10,Enemy,1)   [21,9] 	0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
+UNIT Saar Knight 0x40 			Level(10,Enemy,1)   [18,8] 	0 0 0 0 [SteelLance, Javelin] AttackInRangeAI
+UNIT Novala Shaman 0x40 		Level(10,Enemy,1)   [22,6]	0 0 0 0 [Nosferatu] AttackInRangeAI
+UNIT Murray Cavalier 0x40 		Level(10,Enemy,1)   [23,4] 	0 0 0 0 [SteelSword, Javelin] AttackInRangeAI
+UNIT Tirado General 0x40 		Level(10,Enemy,1)   [25,6] 	0 0 0 0 [SilverLance, Javelin] NeverMoveAI
+UNIT Binks Warrior 0x40 		Level(10,Enemy,1)   [26,3] 	0 0 0 0 [SteelAxe, SteelBow] AttackInRangeAI
+UNIT
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+ENUT 1 //battle quotes
+ENUT 2 //death quotes
+LOAD1 0 PlayerUnits
+ENUN
+LOAD1 0 EnemyUnits
+ENUN
+NoFade
+ENDA
+
+EndingScene:
+ASMC 0x85C71 0x381F5 0x37CF9 //show records screen
+STAL 120
+EVBIT_F 0x2
+MNTS 0x1 //return to title screen
+NoFade
+ENDA
+
+
+VillageEvent:
+	Text(VillageText)
+	GiveItem(Boots,0xFFFF)
+	NoFade
+	ENDA
+	
+HouseEvent:
+	Text(HouseText)	
+	NoFade
+	ENDA
+
+ShopItems:
+SHLI Thunder Elfire Nosferatu Divine Mend Physic PureWater Elixir
+ALIGN 4
+
+ArmoryItems:
+SHLI SteelAxe SteelLance SteelBow SteelSword HandAxe Javelin
+ALIGN 4

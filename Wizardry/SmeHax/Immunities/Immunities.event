@@ -1,0 +1,17 @@
+//0802B62C is the cmp r0,#ClassDemonKing
+
+//8 bytes to hook, the immediate check is only 4 so let's go back 2 more
+
+PUSH
+	ORG 0x2B628
+	jumpToHack(IocanePowder)
+POP
+
+#include "Immunities.lyn.event"
+
+ALIGN 4
+ImmunitiesClassList:
+BYTE Fighter
+BYTE DemonKing
+BYTE 0
+

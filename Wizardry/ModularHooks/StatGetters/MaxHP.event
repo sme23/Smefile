@@ -1,0 +1,29 @@
+#ifndef MODULAR_GETTER_MAXHP_EVENT
+#define MODULAR_GETTER_MAXHP_EVENT
+
+#include "_Common.event"
+
+pMaxHPModifiers: // Maximum HP
+	POIN prAddUnitMaxHP prHexingRodEffect prHexingRodStatus prAddEquipHP prItemPassiveHp 
+	#ifdef DEBUFFS_MIN_ZERO
+	POIN prMinZero
+	#endif
+WORD 0
+
+prAddUnitMaxHP:
+	rAdd(rSByteAt(UNIT_MAXHP))
+
+prAddEquipHP:
+	rAdd(rForUnitEquipped(rCallExternal(prGetItemHPBonus)))
+
+prHexingRodEffect:
+	#incbin "_asm/HexingRod.bin"
+	WORD DebuffTable
+
+prItemPassiveHp:
+	rPassiveStatBoosts(STAT_HP)
+	
+prHexingRodStatus:
+  rIfUnitHasStatus(HexingRodStatusID); rHalved
+
+#endif // MODULAR_GETTER_MAXHP_EVENT

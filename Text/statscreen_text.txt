@@ -1,0 +1,45 @@
+#0x3B SS_TalkText
+Talk[X]
+
+## SS_TalkRText
+Character with whom this unit[N]
+may talk on the battlefield.[X]
+
+## PersonalDataDesc1
+Press Select to toggle[N]
+between stats and growths.[X]
+
+## DonateURL
+donorbox.org/donate-to-circles[X]
+
+## SS_BiorhythmText
+Bio[X]
+
+## SS_BiorhythmRText
+Biorhythm. Affects[N]
+Hit and Avoid.[X]
+
+## SS_BiorhythmNeutral
+Neutral[X]
+
+## SS_BiorhythmGood
+Good[X]
+
+## SS_BiorhythmGreat
+Great[X]
+
+## SS_BiorhythmBest
+Best[X]
+
+## SS_BiorhythmPoor
+Poor[X]
+
+## SS_BiorhythmBad
+Bad[X]
+
+## SS_BiorhythmWorst
+Worst[X]
+
+## LaguzTransformationBarDesc
+Laguz transformation bar.[N]
+Runs 0-30.[X]

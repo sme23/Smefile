@@ -1,0 +1,75 @@
+
+# 0x0002 textWeaponRankIncreasedTo
+ Weapon rank increased to [X]
+
+# 0x0094
+HP Bars[.][X]
+
+# 0x00B2
+Set health bar display[X]
+
+# 0x160 PrologueChName
+Twin Islands[X]
+
+# 0x4F1 LaguzMSSName
+Bar[X]
+
+#include "statscreen_text.txt"
+
+#include "unitmenu_text.txt"
+
+#0xD50 HouseText
+#first text ID in the free block
+[MidRight][LoadFace][CurrentPortrait]Nothing to see here.[A][X]
+
+## VillageText
+[MidRight][LoadFace][0xFF][0xFF]These look useful.[A][X]
+
+## DV1Desc
+Freeze all enemies[N]
+for one turn[X]
+
+## Mov_Text_ID
+Mov[X]
+
+## AumName
+Aum[X]
+
+## AumDesc
+Revives a dead ally.[X]
+
+## SmeName
+Sme[X]
+
+## LaguzName
+Laguz[X]
+
+## QuilavaName
+Quilava[X]
+
+## LightRuneName
+Light Rune[X]
+
+## PrepScreenUseSkillScroll
+ Skill learned[X]
+
+## SkillScrollDesc
+A scroll that teaches[N]
+a skill when used.[X]
+
+## UM_Torch
+ Torch[X]
+
+## UM_TorchDesc
+Turn the torch[N]
+on or off.[X]
+
+## SwarpName
+Swarp[X]
+
+## SwarpDesc
+S W A R P[X]
+
+#include "status_text.txt"
+
+
