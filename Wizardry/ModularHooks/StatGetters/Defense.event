@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pDefenseModifiers: // Defense
-	POIN prAddUnitDefense prHalveIfCapturing prDebuffDef prAddEquipDefense prItemPassiveDefense prRallyDef prLifeAndDeathMinus VigorDanceCheck prSkillFury prFortressDefenseDef prDefiantDef prPushDef (Def_TransformBoost-1) (EnfeebleStatDebuff-1)
+	POIN prAddUnitDefense prDebuffDef prAddEquipDefense prItemPassiveDefense (Def_TransformBoost-1) (EnfeebleStatDebuff-1)
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -19,13 +19,6 @@ prAddEquipDefense:
 prDebuffDef:
 	#incbin "_asm/DebuffDef.bin"
 	WORD DebuffTable
-
-prRallyDef:
-	#incbin "_asm/RallyDef.bin"
-	WORD DebuffTable
-	
-prFortressDefenseDef:
-	_testSkill(FortressDefenseID,5,0)
 
 prItemPassiveDefense:
 	rPassiveStatBoosts(STAT_DEFENSE)

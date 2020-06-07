@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pResistanceModifiers: // Resistance
-	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prSkillFury prFortressResistanceRes prDefiantRes prPushRes (Res_TransformBoost-1) (EnfeebleStatDebuff-1)
+	POIN prAddUnitResistance prDebuffRes prAddEquipResistance prItemPassiveResistance prAddPureWaterBarrierMod (Res_TransformBoost-1) (EnfeebleStatDebuff-1)
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -22,16 +22,6 @@ prAddPureWaterBarrierMod: // Upper part of byte 0x31 in unit struct is current p
 prDebuffRes:
 	#incbin "_asm/DebuffRes.bin"
 	WORD DebuffTable
-
-prRallyRes:
-	#incbin "_asm/RallyRes.bin"
-	WORD DebuffTable
-
-prLifeAndDeathMinus:
-_testSkill(HeroesLifeAndDeathID,0,5)
-
-prFortressResistanceRes:
-	_testSkill(FortressResistanceID,5,0)
 
 prItemPassiveResistance:
 	rPassiveStatBoosts(STAT_RESISTANCE)

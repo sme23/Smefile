@@ -1,0 +1,7 @@
+#include "ASMC Check Installer.event"
+#include "death.lyn.event"
+
+ALIGN 4
+ChangeWeaponRankASMC:
+#incbin "ChangeWeaponRankASMC.dmp"
+

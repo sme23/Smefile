@@ -1,0 +1,49 @@
+//defs for testing
+#define IsMajor 0x80
+#define DonateBlood 0
+
+//specialized getters for MSS
+
+ALIGN 4
+HolyBloodNameGetter:
+#incbin "NameGetter.dmp"
+POIN HolyBloodTable
+POIN HolyBloodCharacterTable
+
+ALIGN 4
+HolyBloodDescGetter:
+#incbin "DescGetter.dmp"
+POIN HolyBloodTable
+POIN HolyBloodCharacterTable
+
+ALIGN 4
+HolyBloodVoracityGetter:
+#incbin "BloodTypeGetter.dmp"
+POIN HolyBloodGetter
+
+//generic getter for all other uses; pass char ID in r0, returns table data pointer or 0 in r0 and major boolean in r1
+
+ALIGN 4
+HolyBloodGetter:
+#incbin "BloodGetter.dmp"
+POIN HolyBloodTable
+POIN HolyBloodCharacterTable
+
+//weapon usability loop function
+
+ALIGN 4
+HolyBloodWeaponLocks:
+#incbin "WeaponLocks.dmp"
+POIN HolyBloodGetter
+POIN HolyBloodLocks
+
+//major blood icon
+#define MajorBloodIconID 0xCB
+
+#ifndef ItemIconTable
+ #define ItemIconTable 0x5926F4
+#endif
+PUSH
+ORG ItemIconTable+(128*MajorBloodIconID)
+#incext Png2Dmp "Major.png"
+POP

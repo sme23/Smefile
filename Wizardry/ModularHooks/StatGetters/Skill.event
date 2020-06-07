@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pSkillModifiers: // Skill
-	POIN prAddUnitSkill prHalveIfRescuing prHalveIfCapturing prDebuffSkl prAddEquipSkill prItemPassiveSkl prRallySkl prResolve prDefiantSkl prPushSkl (Skl_TransformBoost-1) (EnfeebleStatDebuff-1)
+	POIN prAddUnitSkill prHalveIfRescuing prDebuffSkl prAddEquipSkill prItemPassiveSkl (Skl_TransformBoost-1) (EnfeebleStatDebuff-1)
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -18,10 +18,6 @@ prAddEquipSkill:
 
 prDebuffSkl:
 	#incbin "_asm/DebuffSkl.bin"
-	WORD DebuffTable
-
-prRallySkl:
-	#incbin "_asm/RallySkl.bin"
 	WORD DebuffTable
 
 prItemPassiveSkl:

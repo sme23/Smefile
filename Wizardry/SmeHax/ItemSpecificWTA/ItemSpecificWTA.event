@@ -1,0 +1,7 @@
+//Goes in skill system WTA loop
+
+#include "ItemSpecificWTA.lyn.event"
+
+ItemSpecificWTAList: //Attacker weapon, Defender weapon, Hit change, Damage change
+BYTE SteelAxe IronSword 50 5
+WORD 0 //terminator

@@ -4,11 +4,7 @@
 #include "_Common.event"
 ALIGN 4
 pMovModifiers: // Movement
-	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prNullifyIfGuardAI prArmorMarchCheck (Mov_TransformBoost-1)
-	#ifdef STAIRS_ASM
-	POIN StairsMoveDebuff-1
-	#endif
-	POIN prNullifyIfFreeze
+	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prNullifyIfGuardAI (Mov_TransformBoost-1) prNullifyIfFreeze
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -20,14 +16,6 @@ prAddUnitBaseMov: // byte 0x12 in ROM class data is base class movement
 prAddUnitMovBonus:
 	rAdd(rSByteAt(UNIT_MOV_BONUS))
 
-prSkillCelerity:
-	rIfUnitHasSkill(CelerityID)
-		rAddConst(2)
-		
-prSkillPoise:
-	rIfUnitHasSkill(PoiseID)
-		rAddConst(1)
-
 prNullifyIfGuardAI:
 	rIfUnitHasNotAllegience(UA_BLUE)
 		rIfUnitHasGuardAI
@@ -36,10 +24,6 @@ prNullifyIfGuardAI:
 prNullifyIfFreeze:
 	rIfUnitHasStatus(FreezeStatusID)
 		rConstant(0)
-
-prRallyMov:
-	#incbin "_asm/RallyMov.bin"
-	WORD DebuffTable
 
 ALIGN 4
 prAddEquipMov:

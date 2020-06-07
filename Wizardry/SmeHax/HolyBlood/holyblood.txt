@@ -1,0 +1,33 @@
+Installation:
+#include Getters.event somewhere in your buildfile
+included is a sample mss page 4 with holy blood info on it
+included is an edited version of dragon veins with holy blood as a usability requirement
+included with mss is the growth getters modifiers for holy blood growth modifiers
+add HolyBloodWeaponLocks to the skill system weapon usability calc loop
+If you want to check holy blood for anything anywhere else, use the included Holy Blood Getter (stat screen functions don't use it due to niche requirements within them that work more cleanly when self-contained)
+
+
+Table doc:
+
+Holy blood initiation table (types, index is each def)
++0 - Name ID, 2 bytes
++2 - Desc ID, 2 bytes
++4 - HP growth modifier, 1 byte
++5 - Str growth modifier, 1 byte (also mag if no strmag split)
++6 - Skl growth modifier, 1 byte
++7 - Spd growth modifier, 1 byte
++8 - Def growth modifier, 1 byte
++9 - Res growth modifier, 1 byte
++A - Lck growth modifier, 1 byte
++B - Mag growth modifier, 1 byte (ignored if no strmag split) //currently not implemented
+(growth modifiers are doubled for major blood)
++C - Index of holy blood, 1 byte
++D - Gives access to dragon veins (ignored if no dragon veins)
+
+
+Holy blood assignment table (indexed by char ID)
++0 - Holy blood ID (the actual ID is only 7 bits; if the highest bit is set treated as major, otherwise treated as minor)
+
+Holy blood weapon locks list (indexed by item ID)
++0 - Holy Blood ID, 1 byte
+

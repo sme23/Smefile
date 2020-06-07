@@ -8,11 +8,12 @@ PUSH
   #endif
 
 ORG FreeSpaceBLRange
-	#include "ExternalHacks/StrMagSplit/BLRange.event"
+	#include "CompatibilityHacks/StrMagSplit/BLRange.event"
 
 POP
 
 
+// Dependencies
 
 // Icon Rework by Stam
 #include "DependencyHacks/IconRework/IconRework.event"
@@ -51,15 +52,18 @@ POP
 // HP Bars by circleseverywhere, with additions by Tequila
 #include "CompatibilityHacks/HpBars/HpBars.event"
 
+#include "UnitMenu/UnitMenu.event"
+#include "DependencyHacks/Popups.event"
 
 
-// Modular Hooks by Tequila, Snakey, Stan
+
+// Modular Hooks by Tequila, Snakey, Stan, Sme
 #include "ModularHooks/CalcLoops/CalcLoops.event"
+#ifdef STR_MAG_SPLIT
+#include "CompatibilityHacks/StrMagSplit/GrowthGetters/GrowthGetters.event"
+#else
 #include "ModularHooks/GrowthGetters/GrowthGetters.event"
+#endif // STR_MAG_SPLIT
 #include "ModularHooks/StatGetters/_InstallStatGetters.event"
 
 
-#include "UnitMenu/UnitMenu.event"
-
-
-#include "DependencyHacks/Popups.event"
