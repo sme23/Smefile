@@ -1,6 +1,8 @@
 //Refuge hack by Sme
 //Thanks to Stan for Heroes Movement Skills, which were a great reference and resource for the target selection parts
 
+#ifdef USE_REFUGE
+
 #ifdef _FE8_
 
 ALIGN 4
@@ -31,3 +33,5 @@ ERROR Refuge is only for FE8!
 
 #endif
 
+
+#endif // USE_REFUGE

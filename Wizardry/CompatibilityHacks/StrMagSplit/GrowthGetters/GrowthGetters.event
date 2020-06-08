@@ -48,7 +48,5 @@
 	#incbin "Extra_Growth_Boosts.dmp"
     WORD Growth_Options
     POIN ItemTable
-	POIN SkillTester
-	WORD BlossomID
-	WORD AptitudeID
+
 	

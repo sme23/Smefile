@@ -69,11 +69,11 @@ UnitMenuTable:
   MenuCommand(0x67A, 0x6CC, BlueText, $22FDC, $23020)
     MenuCommand(ArriveName, ArriveDesc, BlueText, ArriveCommandUsability, ArriveCommandEffect)
     MenuCommand(EscapeName, EscapeDesc, BlueText, EscapeCommandUsability, EscapeCommandEffect)
+  
   MenuCommand(UMText_DV, UMText_DVDesc, GreenText, VeinUsability, VeinEffect)
-  // UM_Attack
-  MenuCommand(0x67b, 0x6c0, NormalText, $249ac, AttackEffect, $22c31, $22c99) //to clear flags
-  // UM_Attack_B
-  MenuCommand(0x67b, 0x6c0, NormalText, $24a28, AttackEffect, $22c31, $22c99)
+  
+  UM_Attack
+  UM_Attack_B
 
   UM_Staff
   UM_Ride

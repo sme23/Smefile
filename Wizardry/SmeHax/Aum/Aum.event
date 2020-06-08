@@ -1,1 +1,5 @@
+#ifdef USE_AUM
+
 #include "Aum.lyn.event"
+
+#endif // USE_AUM

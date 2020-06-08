@@ -1,5 +1,8 @@
+#ifdef USE_DENY_STAT_SCREEN_ACCESS
+
 #include "EAstdlib.event"
 #include "Extensions/Hack Installation.txt"
+
 
 PUSH
 ORG 0x1C928 
@@ -21,3 +24,4 @@ BYTE GorgonEgg
 BYTE GorgonEgg_2
 BYTE 0
 
+#endif // USE_DENY_STAT_SCREEN_ACCESS

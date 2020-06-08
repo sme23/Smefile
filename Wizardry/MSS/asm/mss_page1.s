@@ -70,7 +70,7 @@ draw_affinity_icon_at 24, 3
 
 draw_status_text_at 21, 5
 
-draw_talk_text_at 21, 7
+@draw_talk_text_at 21, 7
 
 b literalpoolskip
 .ltorg
@@ -101,3 +101,5 @@ page_end
 .ltorg
 
 .include "Get Talkee.asm"
+
+

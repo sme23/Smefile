@@ -1,3 +1,5 @@
+#ifdef USE_DANCER_MUSIC
+
 #include "EAstdlib.event"
 #include "Extensions/Hack Installation.txt"
 
@@ -14,3 +16,4 @@ DancerMusicList: //null-terminated list of classes who use dancer music when ini
 BYTE Dancer
 BYTE 0
 
+#endif // USE_DANCER_MUSIC

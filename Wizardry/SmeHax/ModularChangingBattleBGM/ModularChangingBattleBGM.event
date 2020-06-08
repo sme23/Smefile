@@ -1,3 +1,5 @@
+#ifdef USE_CHANGING_BATTLE_BGM
+
 #include "Extensions/Hack Installation.txt"
 
 PUSH
@@ -14,3 +16,4 @@ BYTE Fomortiis 0x55 //the vanilla one
 BYTE ONeill 0x30 //test
 BYTE 0xFF 0xFF //terminator
 
+#endif // USE_CHANGING_BATTLE_BGM

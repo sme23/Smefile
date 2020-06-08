@@ -33,17 +33,20 @@ POP
 // Debuffs by Colorz, with additions by circleseverywhere and Kirb
 #include "DependencyHacks/Debuffs/Debuffs.event"
 
-// Unit Action Rework
-#include "DependencyHacks/UnitActionRework"
+// Unit Action Rework by Stan
+#include "DependencyHacks/UnitActionRework/UnitActionRework.event"
 
-// Fix Gaining WExp if current is 0
+// Fix Gaining WExp if current is 0 by Stan
 #include "DependencyHacks/FixWpnRnk.event"
 
+//This isnt actually a dependency lol i just like it
+#include "DependencyHacks/DisplayWRankOnLevelUp/DisplayWRankOnLevelUp.event"
 
 
 //All my stuff is installed from here
 #include "SmeHax/SmeHaxInstaller.event"
 
+#include "MSS/ModularStatScreen.event"
 
 
 // Str Mag Split by a whole lotta people

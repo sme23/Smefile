@@ -1,4 +1,6 @@
 
+#ifdef USE_STATUS_EXPANSION
+
 #ifndef STATUS_EXPANSION_INSTALLED
 #define STATUS_EXPANSION_INSTALLED
 
@@ -222,3 +224,6 @@ prCheckUnitStatus:
 #include "Slow/Slow.event"
 
 #endif // STATUS_EXPANSION_INSTALLED
+
+
+#endif // USE_STATUS_EXPANSION

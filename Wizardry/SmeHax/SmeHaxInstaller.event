@@ -26,8 +26,6 @@
 #include "MoreShopMusic/MoreShopMusic.event"
 #include "LaguzBars/LaguzBars.event"
 #include "TrapRework/TrapRework.event"
-
-
 #include "StatusExpansion/StatusExpansion.event"
-#include "PrepSkillForget/PrepSkillForget.event"
+
 #include "Swarp/Swarp.event"

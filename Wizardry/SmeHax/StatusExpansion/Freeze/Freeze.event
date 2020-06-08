@@ -1,5 +1,3 @@
-#ifdef FREEZE_HACK
-
 #define FreezeStatusID 0xF
 
 SetStatusName(FreezeStatusID,FreezeStatusName)
@@ -67,4 +65,3 @@ SetStatusBlinkyIconFunc(FreezeStatusID,BlinkyIconFuncSleepIcon)
 #endif // _FE8_
 
 
-#endif // FREEZE_HACK

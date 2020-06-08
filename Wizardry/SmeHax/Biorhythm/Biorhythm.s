@@ -106,33 +106,8 @@ b NegativeEffect
 
 
 NegativeEffect:
-push {r0}
-
-ldr		r1,SerenityID
-mov 	r0,r5
-ldr 	r3, SkillTester
-mov		r14,r3
-.short	0xF800
-cmp r0,#0
-beq NegTempestCheck
-pop {r0}
-lsr r0,#1
 b ApplyNegativeEffect
 
-NegTempestCheck:
-ldr		r1,TempestID
-mov 	r0,r5
-ldr 	r3, SkillTester
-mov		r14,r3
-.short	0xF800
-cmp r0,#0
-beq NegNoSkills
-pop {r0}
-lsl r0,#1
-b ApplyNegativeEffect
-
-NegNoSkills:
-pop {r0}
 
 ApplyNegativeEffect:
 
@@ -150,33 +125,7 @@ b GoBack
 
 
 PositiveEffect:
-push {r0}
-
-ldr		r1,SerenityID
-mov 	r0,r5
-ldr 	r3, SkillTester
-mov		r14,r3
-.short	0xF800
-cmp r0,#0
-beq PosTempestCheck
-pop {r0}
-lsr r0,#1
 b ApplyPositiveEffect
-
-PosTempestCheck:
-ldr		r1,TempestID
-mov 	r0,r5
-ldr 	r3, SkillTester
-mov		r14,r3
-.short	0xF800
-cmp r0,#0
-beq PosNoSkills
-pop {r0}
-lsl r0,#1
-b ApplyPositiveEffect
-
-PosNoSkills:
-pop {r0}
 
 ApplyPositiveEffect:
 mov r2, r5

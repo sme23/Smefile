@@ -1,3 +1,10 @@
+#ifdef USE_STRMAG_SPLIT
+#ifndef USE_MAGIC_SWORD_REWORK
+#define USE_MAGIC_SWORD_REWORK
+#endif // USE_MAGIC_SWORD_REWORK
+#endif // USE_STRMAG_SPLIT
+
+#ifdef USE_MAGIC_SWORD_REWORK
 
 #ifndef MSR
 
@@ -56,3 +63,5 @@
 	POP
 	
 #endif
+
+#endif // USE_MAGIC_SWORD_REWORK

@@ -1,3 +1,7 @@
+#ifdef USE_SWARP
+
 ALIGN 4
 SwarpEffectWrapper:
 #incbin "StaffEffect.dmp"
+
+#endif // USE_SWARP

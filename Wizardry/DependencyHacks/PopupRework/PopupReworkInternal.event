@@ -9,6 +9,7 @@
 
 #include "Extensions/Hack Installation.txt"
 #include "Extensions/ProcDefinitions.txt"
+#include "Extensions/PopupDefinitions.txt"
 
 #ifndef FreeSpace
 	#define FreeSpace 0xB2A610

@@ -1,3 +1,5 @@
+#ifdef USE_MORE_SHOP_MUSIC
+
 #ifndef MORE_SHOP_MUSIC_INSTALLED
 #define MORE_SHOP_MUSIC_INSTALLED
 
@@ -68,3 +70,5 @@ SetShopSong(ShopSongTable,3,Comrades)
 
 
 #endif // MORE_SHOP_MUSIC_INSTALLED
+
+#endif // USE_MORE_SHOP_MUSIC

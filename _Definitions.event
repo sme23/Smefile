@@ -27,5 +27,17 @@
 // (which is sadly what the included table also does TODO: fix that)
 #define PassiveBoosts 0x80
 
-
-
+//Holy Blood
+#define SeirosBlood 1
+#define CethleannBlood 2
+#define RenaisBlood 3
+#define LatonaBlood 4
+#define FreliaBlood 5
+#define HezulBlood 6
+#define BragiBlood 7
+#define AubinBlood 8
+#define MedeusBlood 9
+#define DragonBlood 10
+#define NinisBlood 11
+#define NoBlood 0xFF
+#define IsMajor 0x80

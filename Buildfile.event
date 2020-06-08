@@ -1,7 +1,13 @@
 #include "EAstdlib.event"
-#include "Extensions/Hack Installation.event"
+#include "Extensions/Hack Installation.txt"
 #include "_Definitions.event"
 #include "_CONFIG.event"
+
+	#inctext DateTimeSetter
+	PUSH
+	ORG $D74EC
+	String("Smefile")
+	POP
 
 ORG FreeSpace
 

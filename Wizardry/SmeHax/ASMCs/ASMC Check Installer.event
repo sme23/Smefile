@@ -3,7 +3,6 @@
 
 ALIGN 4
 //check level
-MESSAGE check_level at currentOffset
 CheckLevelASMC:
 #incbin "check_level.dmp"
 ALIGN 4

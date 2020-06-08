@@ -13,20 +13,25 @@
 	#endif
 #endif
 
+ALIGN 4
 SpecialRangeTable:
 SpecialRange(0,1,HalfMag_Text,HalfMag_Range|1)
 SpecialRange(0xf,0xf,Total_RangeText, Total_Range|1)
 SpecialRangeEnd	//End of Table
 
+ALIGN 4
 RangeCalcGetter:
 #include "RangeCalcGetter.lyn.event"
 //#incbin "RangeCalcGetter.dmp"
 POIN SpecialRangeTable
+
+ALIGN 4
 RangeTextGetter:
 #include "RangeTextGetter.lyn.event"
 //#incbin "RangeTextGetter.dmp"
 POIN SpecialRangeTable
 
+ALIGN 4
 HalfMag_Range:
 #include "RangeCalcs/HalfMag_Range.lyn.event"
 //#incbin "RangeCalcs/HalfMag_Range.dmp"
@@ -34,6 +39,7 @@ HalfMag_Range:
 	POIN 0x18A1C
 	#endif
 
+ALIGN 4
 Total_Range:
 SHORT 0x20FF 0x2100	//return 0xFF for total range
 SHORT 0x4770

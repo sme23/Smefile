@@ -16,4 +16,10 @@ POIN IncDecLaguzBarsPerBattle //gain or lose bar from battle
 POIN HastePostBattle
 WORD 0 //Terminator
 
+
+//non-skill Canto & Canto+
+//Canto+ is given to units if promoted and have the Canto flag
+#include "Canto/Canto.lyn.event"
+#include "Canto/CantoPlus.lyn.event"
+
 PROTECT $1D308 $1D314

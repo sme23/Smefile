@@ -1,0 +1,77 @@
+## BloodNameSeiros
+Seiros[X]
+
+## BloodDescSeiros
+Crest of Seiros.[N]
+Grants usage of Aymr.[X]
+
+## BloodNameCethleann
+Cethleann[X]
+
+## BloodDescCethleann
+Crest of Cethleann. Can[N]
+activate dragon veins.[X]
+
+## BloodNameRenais
+Renais[X]
+
+## BloodDescRenais
+Renais Blood. Grants[N]
+usage of Sieglinde.[X]
+
+## BloodNameLatona
+Latona[X]
+
+## BloodDescLatona
+Latona Blood. Grants[N]
+usage of Ivaldi.[X]
+
+## BloodNameFrelia
+Frelia[X]
+
+## BloodDescFrelia
+Frelia Blood. Grants[N]
+usage of Vidofnir.[X]
+
+## BloodNameHezul
+Hezul[X]
+
+## BloodDescHezul
+Hezul Blood. Grants[N]
+usage of Mystletainn.[X]
+
+## BloodNameBragi
+Bragi[X]
+
+## BloodDescBragi
+Bragi Blood. Can[N]
+activate dragon veins.[X]
+
+## BloodNameAubin
+Aubin[X]
+
+## BloodDescAubin
+Crest of Aubin. Can[N]
+activate dragon veins.[X]
+
+## BloodNameMedeus
+Medeus[X]
+
+## BloodDescMedeus
+Medeus Blood. Grants[N]
+usage of Imhullu.[X]
+
+## BloodNameDragon
+Dragon[X]
+
+## BloodDescDragon
+Dragon's Blood. Can[N]
+activate dragon veins.[X]
+
+## BloodNameNinis
+Ninis[X]
+
+## BloodDescNinis
+Ninis Blood. Grants[N]
+usage of Ereshkigal.[X]
+

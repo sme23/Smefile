@@ -1,6 +1,4 @@
-//defs for testing
-#define IsMajor 0x80
-#define DonateBlood 0
+#ifdef USE_HOLY_BLOOD
 
 //specialized getters for MSS
 
@@ -47,3 +45,5 @@ PUSH
 ORG ItemIconTable+(128*MajorBloodIconID)
 #incext Png2Dmp "Major.png"
 POP
+
+#endif // USE_HOLY_BLOOD

@@ -33,3 +33,5 @@ Transform[X]
 ## UM_UnitShopDesc
 Unit Shop[X]
 
+## RefugeScrollText
+Select a unit to take refuge with.[X]

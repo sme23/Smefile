@@ -1,4 +1,4 @@
-
+#ifdef  USE_ANIMATION_FORCER
 
 PUSH
 ORG 0x57BB4
@@ -15,3 +15,5 @@ BYTE Fomortiis
 BYTE ONeill
 BYTE 0 //terminator
 
+
+#endif //  USE_ANIMATION_FORCER

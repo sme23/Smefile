@@ -10,10 +10,10 @@
 	ALIGN 4
 	#include "Item_TURange.lyn.event"
 	POIN FillRange|1
-	POIN Is_Capture_Set|1	//replace with 0 if not using capture or skill system
+	WORD 0	//replace with 0 if not using capture or skill system
 	#include "Item_TTRange.lyn.event"
 	POIN FillRange|1
-	POIN Is_Capture_Set|1	//replace with 0 if not using capture or skill system
+	WORD 0	//replace with 0 if not using capture or skill system
 	/*
 	Item_TURange: 
 	//build range that checks in units on selectable tiles meet condition
@@ -37,7 +37,7 @@
 	#include "ItemRangeGetter.lyn.event"
 	//#incbin "ItemRangeGetter.dmp"
 	POIN RangeCalcGetter
-	POIN RangeSkillsCheck
+	WORD 0
 	
 	//GetItemRangeM:
 	#include "ItemRangeGetterM.lyn.event"

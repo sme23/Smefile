@@ -1,5 +1,5 @@
 
-#ifdef ADV_WEAPON_LOCKS
+#ifdef USE_WEAPON_LOCK_ARRAY
 
 //Original by Vennobennu, rewritten by Sme for skill system/general buildfile compatibility
 
@@ -24,4 +24,4 @@ BYTE EirikaLord
 BYTE Rogue
 BYTE EndLockArray
 
-#endif // ADV_WEAPON_LOCKS
+#endif // USE_WEAPON_LOCK_ARRAY

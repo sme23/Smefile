@@ -61,7 +61,7 @@
 	ALIGN 4
 	TrapFogLightSourceTable: //ext1 is read as strength of light source
 	FILL (256*1)
-	MESSAGE TrapFogLightSourceTable
+
 	ALIGN 4
 	TrapLightRuneImpassableTable:
 	FILL (256*1)

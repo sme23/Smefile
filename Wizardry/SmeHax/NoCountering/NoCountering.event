@@ -1,17 +1,25 @@
 #include "EAstdlib.event"
 #include "Extensions/Hack Installation.txt"
 
+#ifdef USE_NO_COUNTERING
+
 PUSH
 ORG 0x2C848
 jumpToHack(NoCountering|1)
 POP
 
+ALIGN 4
 NoCountering:
 #incbin "NoCountering.dmp"
 POIN NoCounteringList
 
+ALIGN 4
 NoCounteringList: //null-terminated list of classes who cannot counter
 BYTE GorgonEgg
 BYTE GorgonEgg_2
 BYTE 0
 
+ALIGN 4
+
+
+#endif // USE_NO_COUNTERING

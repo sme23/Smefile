@@ -70,6 +70,10 @@ Swarp[X]
 ## SwarpDesc
 S W A R P[X]
 
+## MessageFatigueRestored
+Fatigue restored[X]
+
 #include "status_text.txt"
 
+#include "holyblood_text.txt"
 

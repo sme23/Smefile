@@ -1,3 +1,5 @@
+#ifdef USE_SPLIT_PROMO_ITEMS
+
 #ifdef _FE8_
 #ifndef SPLIT_PROMO_ITEMS
 
@@ -137,3 +139,5 @@ PromoListEnd
 #else
 ERROR Split Promo Items is only for FE8!
 #endif // _FE8_
+
+#endif // USE_SPLIT_PROMO_ITEMS

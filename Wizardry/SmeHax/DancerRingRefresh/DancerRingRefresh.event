@@ -1,3 +1,5 @@
+#ifdef USE_DANCER_RING_REFRESH
+
 //rings do a thing @ 802FC18 to set its status on target
 //this is preceded by a switch statement for determining the effect based on the item
 //IE Revamp probably touches this already? If so it'll be easier to edit its existing function from the source
@@ -11,3 +13,5 @@ POP
 ALIGN 4
 DancerRingRefresh:
 #incbin "DancerRingRefresh.dmp"
+
+#endif // USE_DANCER_RING_REFRESH

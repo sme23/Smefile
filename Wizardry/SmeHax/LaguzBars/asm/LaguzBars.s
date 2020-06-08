@@ -192,30 +192,6 @@ beq GetLaguzBar_ReturnNil
 
 @we are laguz!
 
-@check for skills
-ldr r0,=SkillTester
-mov r14,r0
-mov r0,r4
-ldr r1,=WildheartIDLink
-ldrb r1,[r1]
-.short 0xF800
-cmp r0,#0
-bne GetLaguzBar_AlwaysFull
-
-ldr r0,=SkillTester
-mov r14,r0
-mov r0,r4
-ldr r1,=FormshiftIDLink
-ldrb r1,[r1]
-.short 0xF800
-cmp r0,#0
-beq GetLaguzBar_NoSkills
-
-GetLaguzBar_AlwaysFull:
-mov r0,#30
-b GetLaguzBar_GoBack
-
-
 GetLaguzBar_NoSkills:
 @get the external data byte
 
@@ -276,30 +252,6 @@ ldrb r0,[r0,#4]
 bl IsClassLaguz
 cmp r0,#0
 beq SetLaguzBar_GoBack
-
-@do we have Wildheart or Formshift?
-ldr r0,=SkillTester
-mov r14,r0
-mov r0,r4
-ldr r1,=WildheartIDLink
-ldrb r1,[r1]
-.short 0xF800
-cmp r0,#0
-bne SetLaguzBar_BarAlwaysFull
-
-ldr r0,=SkillTester
-mov r14,r0
-mov r0,r4
-ldr r1,=FormshiftIDLink
-ldrb r1,[r1]
-.short 0xF800
-cmp r0,#0
-beq SetLaguzBar_NoSkills
-
-SetLaguzBar_BarAlwaysFull:
-mov r5,#30
-b SetLaguzBar_SetBarValue
-
 
 SetLaguzBar_NoSkills:
 ldrb r0,[r4,#0xB] 	@allegiance byte
@@ -659,24 +611,7 @@ ldrb r1,[r0] 	@r0 = bar starting position
 mov r0,r4
 bl SetLaguzBar
 
-@check if unit has either skill that denotes them needing to transform here
-ldr r0,=SkillTester
-mov r14,r0
-mov r0,r4
-ldr r1,=WildheartIDLink
-ldrb r1,[r1]
-.short 0xF800
-cmp r0,#0
-bne InitializeLaguzBars_AutotransformPlayerUnit
-
-ldr r0,=SkillTester
-mov r14,r0
-mov r0,r4
-ldr r1,=FormshiftIDLink
-ldrb r1,[r1]
-.short 0xF800
-cmp r0,#0
-beq InitializeLaguzBars_LoopRestart1
+b InitializeLaguzBars_LoopRestart1
 
 InitializeLaguzBars_AutotransformPlayerUnit:
 mov r0,r4
@@ -1142,21 +1077,6 @@ add r0,r1
 add r0,r5
 ldrb r0,[r0]
 
-mov r6,r0
-@do we have Wildheart?
-
-ldr r0,=SkillTester
-mov r14,r0
-mov r0,r4
-ldr r1,=WildheartIDLink
-ldrb r1,[r1]
-.short 0xF800
-cmp r0,#0
-beq TransformationStatBoostCheck_DontHalveBonus
-lsr r6,r6,#1 @/2
-
-TransformationStatBoostCheck_DontHalveBonus:
-mov r0,r6
 b TransformationStatBoostCheck_GoBack
 
 TransformationStatBoostCheck_RetFalse:
@@ -1534,24 +1454,7 @@ ldrb r1,[r0] 	@r0 = bar starting position
 mov r0,r4
 bl SetLaguzBar
 
-@check if unit has either skill that denotes them needing to transform here
-ldr r0,=SkillTester
-mov r14,r0
-mov r0,r4
-ldr r1,=WildheartIDLink
-ldrb r1,[r1]
-.short 0xF800
-cmp r0,#0
-bne InitializeLaguzBars2_AutotransformPlayerUnit
-
-ldr r0,=SkillTester
-mov r14,r0
-mov r0,r4
-ldr r1,=FormshiftIDLink
-ldrb r1,[r1]
-.short 0xF800
-cmp r0,#0
-beq InitializeLaguzBars2_LoopRestart1
+b InitializeLaguzBars2_LoopRestart1
 
 InitializeLaguzBars2_AutotransformPlayerUnit:
 mov r0,r4

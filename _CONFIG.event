@@ -1,0 +1,103 @@
+//all the things lol
+//I entirely did not set up MSS for non-all the things cases so if you disable anything that would have things on the stat screen you'll need to set up your desired stat screen yourself (things only touch page 4)
+
+#define __DEBUG__
+
+
+//Compatibility Hacks
+//HP Bars
+#define USE_HP_BARS
+
+//Str/Mag Split
+#define USE_STRMAG_SPLIT
+
+
+//My Hacks
+//Animation Forcer
+#define USE_ANIMATION_FORCER
+
+//Aum
+#define USE_AUM
+
+//Biorhythm
+#define USE_BIORHYTHM
+
+//Cannot Crit
+#define USE_CANNOT_CRIT
+
+//Dancer Music
+#define USE_DANCER_MUSIC
+
+//Dancer Ring Refresh
+#define USE_DANCER_RING_REFRESH
+
+//Deny Stat Screen Access
+#define USE_DENY_STAT_SCREEN_ACCESS
+
+//Escape/Arrive
+#define USE_ESCAPE_ARRIVE
+
+//Fatigue
+#define USE_FATIGUE
+
+//Fixed Damage Weapons
+#define USE_FIXED_DAMAGE_WEAPONS
+
+//Holy Blood
+#define USE_HOLY_BLOOD
+
+//Item-Specific WTA
+#define USE_ITEM_SPECIFIC_WTA
+
+//Laguz Bars
+#define USE_LAGUZ_BARS
+
+//Magic Sword Rework (this option is overridden by Str/Mag split)
+#define USE_MAGIC_SWORD_REWORK
+
+//Modular Changing Battle BGM
+#define USE_CHANGING_BATTLE_BGM
+
+//More Shop Music
+#define USE_MORE_SHOP_MUSIC
+
+//No Countering
+#define USE_NO_COUNTERING
+
+//NosResire
+#define USE_NOS_RESIRE
+
+//Reaver Split
+#define USE_REAVER_SPLIT
+
+//Refuge
+#define USE_REFUGE
+
+//More Shop Types
+#define USE_MORE_SHOPS
+
+//Shop Unit
+#define USE_SHOP_UNIT
+
+//Split Promo Items
+#define USE_SPLIT_PROMO_ITEMS
+
+//Status Expansion
+#define USE_STATUS_EXPANSION
+
+//Status Weapons
+#define USE_STATUS_WEAPONS
+
+//Swarp 
+#define USE_SWARP
+
+//Trap Rework
+#define USE_TRAP_REWORK
+
+//Weapon Lock Array
+#define USE_WEAPON_LOCK_ARRAY
+
+
+//A handful of other things are also installed as they are dependencies for one or more hacks here, as well as versions of calc loops
+
+//Additionally, this will always install a bunch of ASMCs because of the sheer number of individual toggles that would create to not have always install but they can just sit unreferenced if you don't want to use them, don't take up a ton of space or hook anywhere

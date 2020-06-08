@@ -1,3 +1,5 @@
+#ifdef USE_SHOP_UNIT
+
 #ifndef SHOP_UNIT_INSTALLED
 #define SHOP_UNIT_INSTALLED
 
@@ -17,3 +19,5 @@ ALIGN 4
 
 
 #endif // SHOP_UNIT_INSTALLED
+
+#endif // USE_SHOP_UNIT
