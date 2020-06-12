@@ -6,7 +6,7 @@ Buildfile environment containing all of my various wizardry, installation-config
 
 
 
-## Fixes
+## To Fix
 
 - Make Fixed Damage Weapons re-calc effectiveness (verify working with eff rework as well)
 - Make Laguz units untransform at the end of chapters (via ASMC or otherwise) (see how debuffs are cleared?)
