@@ -3,6 +3,10 @@
 
 #define __DEBUG__
 
+//Enable/disable the non-wizardry stuff
+
+#define USE_TEST_MAP
+
 
 //Compatibility Hacks
 //HP Bars
