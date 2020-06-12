@@ -79,7 +79,7 @@ Buildfile environment containing all of my various wizardry, installation-config
 	- If a unit is trying to attack from a higher height to a lower height by an amount >1, the attacker gains a hit/atk advantage and the defender a hit/atk disadvantage; inverse if attacking from >1 height lower to higher
 	
 	
-- Exploration Maps (Walkies)
+- Walkies (Exploration Maps)
 	- Lets you walk around a map like in gaiden
 	- Proc loaded (via ASMC?) as a blocking child proc of GAMECTRL
 	- Looped function for getting inputs
