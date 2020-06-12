@@ -3,8 +3,8 @@
 #include "_Definitions.event"
 #include "_CONFIG.event"
 
-	#inctext DateTimeSetter
-	#inctext ProjectNameSetter
+#inctext DateTimeSetter
+#inctext ProjectNameSetter
 
 ORG FreeSpace
 
@@ -19,6 +19,7 @@ ORG FreeSpace
 //Wizardry
 #include "Wizardry/MasterWizardryInstaller.event"
 
-
-//Test Map
-#include "TestMap/TestMapInstaller.event"
+#ifdef USE_TEST_MAP
+	//Test Map
+	#include "TestMap/TestMapInstaller.event"
+#endif // USE_TEST_MAP
