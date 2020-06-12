@@ -3,10 +3,10 @@
 #include "_Definitions.event"
 #include "_CONFIG.event"
 
+ORG FreeSpace
+
 #inctext DateTimeSetter
 #inctext ProjectNameSetter
-
-ORG FreeSpace
 
 //Text
 #include "Text/Install Text Data.event"
