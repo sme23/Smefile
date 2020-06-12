@@ -130,23 +130,20 @@
   
   ALIGN 4
   MSS_page2:
-    #incbin "asm/mss_page2_original.dmp"
+    #include "asm/mss_page2.lyn.event"
 
   ALIGN 4
   MSS_page3:
-    #incbin "asm/mss_page3_original.dmp"
+    #include "asm/mss_page3.lyn.event"
 	
   ALIGN 4
   MSS_page4:
-    #incbin "asm/mss_page4.dmp"
+    #include "asm/mss_page4.lyn.event"
 	
   ALIGN 4
-  TxtData0x0D4B:
-    String("Donate to Circles")
-    BYTE 0
-
-    setText(0x0D4B,TxtData0x0D4B)
- 
+  DonateToCirclesTextIDLink:
+  SHORT DonateToCirclesText
+	
 
   ALIGN 4
   NewPageNameGraphic:
@@ -198,12 +195,7 @@
     POIN Class_Level_Cap_Table Get_Hp_Growth Get_Str_Growth Get_Skl_Growth Get_Spd_Growth Get_Def_Growth Get_Res_Growth Get_Luk_Growth
     WORD Growth_Options
 
-  ALIGN 4
-/*
-  This has been moved to a CSV
-  Class_Level_Cap_Table:
-    #incbin "Display Growths Options/Class_Level_Cap_Table.dmp"
-*/
+
   ALIGN 4
   Enemy_Autolevel:
     #incbin "asm/Enemy_Autolevel.dmp"
@@ -249,6 +241,19 @@
   */
 
   #include "RText.event"
+  
+//Remove glowy spinny circle thingy from stat screen
+
+PUSH
+ORG $88620
+POIN RemoveGlowy
+POP
+
+ALIGN 4
+RemoveGlowy:
+//#incext Png2Dmp "RemoveGlowy.png" --lz77
+#incbin "RemoveGlowy.dmp"
+
 
 #else // _FE8_
   ERROR Modular Stat Screen hack is for FE8

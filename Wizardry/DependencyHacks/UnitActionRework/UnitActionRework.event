@@ -71,7 +71,7 @@ pActionRoutineTable:
 	NoActionRoutine               // 0x24 FREE
 	NoActionRoutine               // 0x25 FREE
 	NoActionRoutine               // 0x26 FREE
-	NoActionRoutine               // 0x27 FREE
+	ActionRoutine(ActionRefuge)   // 0x27 Refuge
 	NoActionRoutine               // 0x28 FREE
 	NoActionRoutine               // 0x29 FREE
 	NoActionRoutine               // 0x2A FREE

@@ -3,6 +3,9 @@
 
 page_start
 
-draw_textID_at 17, 9, textid=0xd4b, width=16, colour=Green
+ldr r0,=DonateToCirclesTextIDLink
+ldrh r0,[r0]
+draw_textID_at 17, 9, width=16, colour=Green
 
 page_end
+

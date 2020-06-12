@@ -111,6 +111,9 @@ UnitMenuTable:
   UM_Arena
 	
   UM_Rescue
+  
+  MenuCommand(UM_Refuge,UM_RefugeDesc,NormalText,RefugeUsability,RefugeEffect)
+  
   UM_Give
   UM_Take
   UM_Drop

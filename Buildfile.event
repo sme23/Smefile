@@ -4,10 +4,7 @@
 #include "_CONFIG.event"
 
 	#inctext DateTimeSetter
-	PUSH
-	ORG $D74EC
-	String("Smefile")
-	POP
+	#inctext ProjectNameSetter
 
 ORG FreeSpace
 

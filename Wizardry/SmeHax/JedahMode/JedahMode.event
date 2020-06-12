@@ -4,7 +4,7 @@
 	#include "JedahMode.lyn.event"
 
 	IsJedahList: //list of people who are jedah
-		BYTE ONeill //For today, O'Neill gets to be Jedah
+//		BYTE ONeill //For today, O'Neill gets to be Jedah
 		BYTE 0 //termimator
 
 	#ifndef USE_FE2_JEDAH

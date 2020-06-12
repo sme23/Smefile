@@ -73,6 +73,25 @@ Fatigue restored[X]
 ## LaguzMSSName
 Bar[X]
 
+## DonateToCirclesText
+Donate to Circles[X]
+
+## HolyBloodText
+Bld[X]
+
+## AHolyBloodName
+Donate[X]
+
+## AHolyBloodDesc
+Donate to Circles[X]
+
+##UM_Refuge
+ Refuge[X]
+ 
+##UM_RefugeDesc
+Take refuge with target.[X]
+
+
 #include "status_text.txt"
 
 #include "holyblood_text.txt"

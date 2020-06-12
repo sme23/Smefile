@@ -12,7 +12,6 @@ POIN AnimationForcerList
 
 AnimationForcerList:
 BYTE Fomortiis
-BYTE ONeill
 BYTE 0 //terminator
 
 
