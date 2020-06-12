@@ -32,7 +32,6 @@ Buildfile environment containing all of my various wizardry, installation-config
 	- configurable the turns that are a multiple of 4 version or the every 4th attack version, though the latter will use 2 bits of debuff table space to track how many times you've been attacked
 
 
-
 ## Todo but afraid of doing because big menus and CHAX
 
 - Tellius Base
@@ -53,6 +52,7 @@ Buildfile environment containing all of my various wizardry, installation-config
 		- map view menu contains Return, which goes back to the base (probably with some event schenanigans)
 		- Can save at prep menu
 
+
 - TRS/RD Party Split Menu
 	- Menu allowing for separating the party into four groups
 		- configurable unit cap for each group
@@ -65,8 +65,10 @@ Buildfile environment containing all of my various wizardry, installation-config
 	- Automatically hides from the party everyone in the second group
 	- ASMCs + event macros for easily swapping the current party
 
+
 - Weapon Type Extension
 	- rewrite every area that checks for weapon level, rewrite stat screen page 3, use icon rework stuff that's already been done to get weapon type icons beyond the first 8, 
+
 
 - Height Map
 	- Gives each tile on the map a height value
