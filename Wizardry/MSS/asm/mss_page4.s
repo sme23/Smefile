@@ -5,7 +5,7 @@ page_start
 
 ldr r0,=DonateToCirclesTextIDLink
 ldrh r0,[r0]
-draw_textID_at 17, 11, width=16, colour=Green
+draw_textID_at 16, 11, width=16, colour=Green
 
 
 @draw blood
@@ -113,4 +113,3 @@ blh DrawBar, r4
 PostLaguzBar:
 
 page_end
-

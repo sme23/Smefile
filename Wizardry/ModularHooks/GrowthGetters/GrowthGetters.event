@@ -48,5 +48,7 @@
 	#incbin "Extra_Growth_Boosts.dmp"
     WORD Growth_Options
     POIN ItemTable
+	POIN HolyBloodTable
+	POIN HolyBloodCharacterTable
 
 	
