@@ -91,6 +91,13 @@ Donate to Circles[X]
 ##UM_RefugeDesc
 Take refuge with target.[X]
 
+## FatigueLabelText
+Ftg[X]
+
+## FatigueDesc
+How tired this unit is.[N]
+Can't deploy if too high.[X]
+
 
 #include "status_text.txt"
 

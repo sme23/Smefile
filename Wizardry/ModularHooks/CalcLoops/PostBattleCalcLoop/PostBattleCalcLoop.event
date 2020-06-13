@@ -13,9 +13,9 @@ POIN PostCombatSkills
 PostCombatSkills: //I like having savage blow as the first one because it makes the activation sound play first
 POIN Canto CantoPlus
 POIN IncDecLaguzBarsPerBattle //gain or lose bar from battle
-POIN HastePostBattle
+POIN HastePostBattle //refresh if haste effect is applied & haven't yet
+POIN PostCombatIncrementFatigue PostCombatStaffIncrementFatigue 
 WORD 0 //Terminator
-
 
 //non-skill Canto & Canto+
 //Canto+ is given to units if promoted and have the Canto flag

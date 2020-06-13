@@ -143,6 +143,12 @@
   ALIGN 4
   DonateToCirclesTextIDLink:
   SHORT DonateToCirclesText
+  ALIGN 4
+  SS_BiorhythmTextLink:
+  SHORT SS_BiorhythmText
+  ALIGN 4
+  FatigueNameLink:
+  SHORT FatigueLabelText
 	
 
   ALIGN 4
