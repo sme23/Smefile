@@ -27,26 +27,10 @@
 // (which is sadly what the included table also does TODO: fix that)
 #define PassiveBoosts 0x80
 
-//Holy Blood
-#define SeirosBlood 1
-#define CethleannBlood 2
-#define RenaisBlood 3
-#define LatonaBlood 4
-#define FreliaBlood 5
-#define HezulBlood 6
-#define BragiBlood 7
-#define AubinBlood 8
-#define MedeusBlood 9
-#define DragonBlood 10
-#define NinisBlood 11
-#define NoBlood 0xFF
-#define IsMajor 0x80
-
-
 //Definitions for Holy Blood presets
 
 //Example entry that i'm not removing
-#define DonateBlood 0
+#define ExampleBlood 0
 
 //Archanea
 #define AnriBlood 1 
@@ -88,16 +72,100 @@
 //Ylisse
 #define GrimaBlood 23
 
+//Elibe
+#define HartmutBlood 24
+#define BernBlood HartmutBlood //Alias
+#define RolandBlood 25
+#define LyciaBlood RolandBlood //Alias
+#define BariganBlood 26
+#define IliaBlood BariganBlood //Alias
+#define DurbanBlood 27
+#define WesternIslesBlood DurbanBlood //Alias
+#define HanonBlood 28
+#define SacaeBlood HanonBlood //Alias
+#define ElimineBlood 29
+#define EtruriaBlood ElimineBlood //Alias
+#define AthosBlood 30
+#define BrammimondBlood 31
 
+//Magvel
+#define RenaisBlood 32
+#define GradoBlood 33
+#define FreliaBlood 34
+#define JehannaBlood 35
+#define LatonaBlood 36
+#define RaustenBlood LatonaBlood //Alias
+#define FomortiisBlood 37
+#define DemonKingBlood FomortiisBlood //Alias
 
+//Tellius
+#define BegnionBlood 38
+#define SephiranBlood BegnionBlood //Alias
+#define CrimeaBlood 39
+#define DaeinBlood 40
+#define GalliaBlood 41
+#define GoldoaBlood 42
+#define DheginseaBlood GoldoaBlood //Alias
+#define PhoenicisBlood 43
+#define HorusBlood PhoenicisBlood //Alias
+#define KilvasBlood 44
+#define SerenesBlood 45
+#define HeronBlood SerenesBlood //Alias
+#define HatariBlood 46
+#define AsheraBlood 47
+#define YuneBlood 48
 
+//Fateslandia
+#define DragonBlood 49
 
+//Fodlan
+#define ErnestBlood 50
+#define CrestOfErnest ErnestBlood //Alias
+#define MacuilBlood 51
+#define CrestOfMacuil MacuilBlood //Alias
+#define SeirosBlood 52
+#define CrestOfSeiros SeirosBlood //Alias
+#define DominicBlood 53
+#define CrestOfDominic DominicBlood //Alias
+#define FraldariusBlood 54
+#define CrestOfFraldarius FraldariusBlood //Alias
+#define NoaBlood 55
+#define CrestOfNoa NoaBlood //Alias
+#define CethleannBlood 56
+#define CrestOfCethleann CethleannBlood //Alias
+#define DaphnelBlood 57
+#define CrestOfDaphnel DaphnelBlood //Alias
+#define BlaiddydBlood 58
+#define CrestOfBlaiddyd BlaiddydBlood //Alias
+#define GloucesterBlood 59
+#define CrestOfGloucester GloucesterBlood //Alias
+#define GonerilBlood 60
+#define CrestOfGoneril GonerilBlood //Alias
+#define CicholBlood 61
+#define CrestOfCichol CicholBlood //Alias
+#define AubinBlood 62
+#define CrestOfAubin AubinBlood //Alias
+#define ChevalierBlood 63
+#define CrestOfChevalier ChevalierBlood //Alias
+#define IndechBlood 64
+#define CrestOfIndech IndechBlood //Alias
+#define BeastBlood 65
+#define MauriceBlood BeastBlood //Alias
+#define CrestOfTheBeast BeastBlood //Alias
+#define CrestOfMaurice BeastBlood //Alias
+#define CharonBlood 66
+#define CrestOfCharon CharonBlood //Alias
+#define TimotheosBlood 67
+#define CrestOfTimotheos TimotheosBlood //Alias
+#define RieganBlood 68
+#define CrestOfRiegan RieganBlood //Alias
+#define GautierBlood 69
+#define CrestOfGautier GautierBlood //Alias
+#define LamineBlood 70
+#define CrestOfLamine LamineBlood //Alias
+#define FlamesBlood 71
+#define CrestOfFlames FlamesBlood //Alias
 
-
-
-
-
-
+//Utility Defs
 #define NoBlood 0xFF
 #define IsMajor 0x80
-

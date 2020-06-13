@@ -4,4 +4,10 @@
 
 //reserved space for gfx stuff for flavour
 
+setMugEntry(2, Smethlyn, 3, 6, 3, 4) 
+
+ALIGN 4
+Smethlyn:
+#incext PortraitFormatter "Gfx/Smethlyn.png"
+
 

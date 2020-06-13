@@ -96,9 +96,13 @@ SongTable(DragonVeinSFXID,DragonVeinSFX,7)
 
 
 
-
   VeinUsability:
     #incbin "asm/DragonVeinUsabilityNoSkill.dmp"
+    WORD DragonVeinTrapID
+    WORD 0
+    WORD 0
+	POIN HolyBloodTable
+	POIN HolyBloodCharacterTable
 
 
   VeinEffect:

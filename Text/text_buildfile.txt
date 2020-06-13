@@ -36,7 +36,7 @@ Aum[X]
 Revives a dead ally.[X]
 
 ## SmeName
-Sme[X]
+Smethlyn[X]
 
 ## LaguzName
 Laguz[X]
