@@ -1,77 +1,425 @@
-## BloodNameSeiros
-Seiros[X]
+## AnriBloodName
+Anri[X]
 
-## BloodDescSeiros
-Crest of Seiros.[N]
-Grants usage of Aymr.[X]
+## AdrahBloodName
+Adrah[X]
 
-## BloodNameCethleann
-Cethleann[X]
+## JiolBloodName
+Jiol[X]
 
-## BloodDescCethleann
-Crest of Cethleann. Can[N]
-activate dragon veins.[X]
+## MarlonBloodName
+Marlon[X]
 
-## BloodNameRenais
-Renais[X]
+## IoteBloodName
+Iote[X]
 
-## BloodDescRenais
-Renais Blood. Grants[N]
-usage of Sieglinde.[X]
+## MostynBloodName
+Mostyn[X]
 
-## BloodNameLatona
-Latona[X]
-
-## BloodDescLatona
-Latona Blood. Grants[N]
-usage of Ivaldi.[X]
-
-## BloodNameFrelia
-Frelia[X]
-
-## BloodDescFrelia
-Frelia Blood. Grants[N]
-usage of Vidofnir.[X]
-
-## BloodNameHezul
-Hezul[X]
-
-## BloodDescHezul
-Hezul Blood. Grants[N]
-usage of Mystletainn.[X]
-
-## BloodNameBragi
-Bragi[X]
-
-## BloodDescBragi
-Bragi Blood. Can[N]
-activate dragon veins.[X]
-
-## BloodNameAubin
-Aubin[X]
-
-## BloodDescAubin
-Crest of Aubin. Can[N]
-activate dragon veins.[X]
-
-## BloodNameMedeus
+## MedeusBloodName
 Medeus[X]
 
-## BloodDescMedeus
-Medeus Blood. Grants[N]
-usage of Imhullu.[X]
+## RigelBloodName
+Rigel[X]
 
-## BloodNameDragon
+## ZofiaBloodName
+Zofia[X]
+
+## BaldrBloodName
+Baldr[X]
+
+## OdBloodName
+Od[X]
+
+## DainnBloodName
+Dainn[X]
+
+## UlirBloodName
+Ulir[X]
+
+## BragiBloodName
+Bragi[X]
+
+## ThrudBloodName
+Thrud[X]
+
+## FjalarBloodName
+Fjalar[X]
+
+## HezulBloodName
+Hezul[X]
+
+## NjorunBloodName
+Njorun[X]
+
+## NeirBloodName
+Neir[X]
+
+## NagaBloodName
+Naga[X]
+
+## ForsetiBloodName
+Forseti[X]
+
+## LoptousBloodName
+Loptous[X]
+
+## GrimaBloodName
+Grima[X]
+
+## HartmutBloodName
+Hartmut[X]
+
+## RolandBloodName
+Roland[X]
+
+## BariganBloodName
+Barigan[X]
+
+## DurbanBloodName
+Durban[X]
+
+## HanonBloodName
+Hanon[X]
+
+## ElimineBloodName
+Elimine[X]
+
+## AthosBloodName
+Athos[X]
+
+## BrammimondBloodName
+Brammimond[X]
+
+## RenaisBloodName
+Renais[X]
+
+## GradoBloodName
+Grado[X]
+
+## FreliaBloodName
+Frelia[X]
+
+## JehannaBloodName
+Jehanna[X]
+
+## LatonaBloodName
+Latona[X]
+
+## FomortiisBloodName
+Fomortiis[X]
+
+## BegnionBloodName
+Begnion[X]
+
+## CrimeaBloodName
+Crimea[X]
+
+## DaeinBloodName
+Daein[X]
+
+## GalliaBloodName
+Gallia[X]
+
+## GoldoaBloodName
+Goldoa[X]
+
+## PhoenicisBloodName
+Phoenicis[X]
+
+## KilvasBloodName
+Kilvas[X]
+
+## SerenesBloodName
+Serenes[X]
+
+## HatariBloodName
+Hatari[X]
+
+## AsheraBloodName
+Ashera[X]
+
+## YuneBloodName
+Yuna[X]
+
+## DragonBloodName
 Dragon[X]
 
-## BloodDescDragon
-Dragon's Blood. Can[N]
-activate dragon veins.[X]
+## ErnestBloodName
+Ernest[X]
 
-## BloodNameNinis
-Ninis[X]
+## MacuilBloodName
+Macuil[X]
 
-## BloodDescNinis
-Ninis Blood. Grants[N]
-usage of Ereshkigal.[X]
+## SeirosBloodName
+Seiros[X]
 
+## DominicBloodName
+Dominic[X]
+
+## FraldariusBloodName
+Fraldarius[X]
+
+## NoaBloodName
+Noa[X]
+
+## CethleannBloodName
+Cethleann[X]
+
+## DaphnelBloodName
+Daphnel[X]
+
+## BlaiddydBloodName
+Blaiddyd[X]
+
+## GloucesterBloodName
+Gloucester[X]
+
+## GonerilBloodName
+Goneril[X]
+
+## CicholBloodName
+Cichol[X]
+
+## AubinBloodName
+Aubin[X]
+
+## ChevalierBloodName
+Chevalier[X]
+
+## IndechBloodName
+Indech[X]
+
+## BeastBloodName
+Beast[X]
+
+## CharonBloodName
+Charon[X]
+
+## TimotheosBloodName
+Timotheos[X]
+
+## RieganBloodName
+Riegan[X]
+
+## GautierBloodName
+Gautier[X]
+
+## LamineBloodName
+Lamine[X]
+
+## FlamesBloodName
+Flames[X]
+
+## AnriBloodDesc
+Anri Blood[X]
+
+## AdrahBloodDesc
+Adrah Blood[X]
+
+## JiolBloodDesc
+Jiol Blood[X]
+
+## MarlonBloodDesc
+Marlon Blood[X]
+
+## IoteBloodDesc
+Iote Blood[X]
+
+## MostynBloodDesc
+Mostyn Blood[X]
+
+## MedeusBloodDesc
+Medeus Blood[X]
+
+## RigelBloodDesc
+Rigel Blood[X]
+
+## ZofiaBloodDesc
+Zofia Blood[X]
+
+## BaldrBloodDesc
+Baldr Blood[X]
+
+## OdBloodDesc
+Od Blood[X]
+
+## DainnBloodDesc
+Dainn Blood[X]
+
+## UlirBloodDesc
+Ulir Blood[X]
+
+## BragiBloodDesc
+Bragi Blood[X]
+
+## ThrudBloodDesc
+Thrud Blood[X]
+
+## FjalarBloodDesc
+Fjalar Blood[X]
+
+## HezulBloodDesc
+Hezul Blood[X]
+
+## NjorunBloodDesc
+Njorun Blood[X]
+
+## NeirBloodDesc
+Neir Blood[X]
+
+## NagaBloodDesc
+Naga Blood[X]
+
+## ForsetiBloodDesc
+Forseti Blood[X]
+
+## LoptousBloodDesc
+Loptous Blood[X]
+
+## GrimaBloodDesc
+Blood of Grima[X]
+
+## HartmutBloodDesc
+Hartmut Blood[X]
+
+## RolandBloodDesc
+Roland Blood[X]
+
+## BariganBloodDesc
+Barigan Blood[X]
+
+## DurbanBloodDesc
+Durban Blood[X]
+
+## HanonBloodDesc
+Hanon Blood[X]
+
+## ElimineBloodDesc
+Elimine Blood[X]
+
+## AthosBloodDesc
+Blood of Athos[X]
+
+## BrammimondBloodDesc
+Blood of Brammimond[X]
+
+## RenaisBloodDesc
+Renais Blood[X]
+
+## GradoBloodDesc
+Grado Blood[X]
+
+## FreliaBloodDesc
+Frelia Blood[X]
+
+## JehannaBloodDesc
+Jehanna Blood[X]
+
+## LatonaBloodDesc
+Latona Blood[X]
+
+## FomortiisBloodDesc
+Fomortiis Blood[X]
+
+## BegnionBloodDesc
+Blood of Begnion[X]
+
+## CrimeaBloodDesc
+Blood of Crimea[X]
+
+## DaeinBloodDesc
+Blood of Daein[X]
+
+## GalliaBloodDesc
+Blood of Gallia[X]
+
+## GoldoaBloodDesc
+Blood of Goldoa[X]
+
+## PhoenicisBloodDesc
+Blood of Phoenicis[X]
+
+## KilvasBloodDesc
+Blood of Kilvas[X]
+
+## SerenesBloodDesc
+Blood of Serenes[X]
+
+## HatariBloodDesc
+Blood of Hatari[X]
+
+## AsheraBloodDesc
+Descendent of the  Goddess Ashera.[X]
+
+## YuneBloodDesc
+Descendent of the Goddess Yune.[X]
+
+## DragonBloodDesc
+Dragon's Blood[X]
+
+## ErnestBloodDesc
+Crest of Ernest[X]
+
+## MacuilBloodDesc
+Crest of Macuil[X]
+
+## SeirosBloodDesc
+Crest of Seiros[X]
+
+## DominicBloodDesc
+Crest of Dominic[X]
+
+## FraldariusBloodDesc
+Crest of Fraldarius[X]
+
+## NoaBloodDesc
+Crest of Noa[X]
+
+## CethleannBloodDesc
+Crest of Cethleann[X]
+
+## DaphnelBloodDesc
+Crest of Daphnel[X]
+
+## BlaiddydBloodDesc
+Crest of Blaiddyd[X]
+
+## GloucesterBloodDesc
+Crest of Gloucester[X]
+
+## GonerilBloodDesc
+Crest of Goneril[X]
+
+## CicholBloodDesc
+Crest of Cichol[X]
+
+## AubinBloodDesc
+Crest of Aubin[X]
+
+## ChevalierBloodDesc
+Crest of Chevalier[X]
+
+## IndechBloodDesc
+Crest of Indech[X]
+
+## BeastBloodDesc
+Crest of the Beast[X]
+
+## CharonBloodDesc
+Crest of Charon[X]
+
+## TimotheosBloodDesc
+Crest of Timotheos[X]
+
+## RieganBloodDesc
+Crest of Riegan[X]
+
+## GautierBloodDesc
+Crest of Gautier[X]
+
+## LamineBloodDesc
+Crest of Lamine[X]
+
+## FlamesBloodDesc
+Crest of Flames[X]
