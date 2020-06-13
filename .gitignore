@@ -22,6 +22,7 @@ $RECYCLE.BIN/
 *.sav
 *.sgm
 *.ups
+_Hack.sym
 
 # python cache
 __pycache__
