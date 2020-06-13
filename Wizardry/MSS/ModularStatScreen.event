@@ -149,6 +149,12 @@
   ALIGN 4
   FatigueNameLink:
   SHORT FatigueLabelText
+  ALIGN 4
+  LaguzBarNameLink:
+  SHORT LaguzMSSName
+  ALIGN 4
+  SS_BloodTextLink:
+  SHORT HolyBloodText
 	
 
   ALIGN 4
