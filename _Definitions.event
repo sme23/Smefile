@@ -41,3 +41,63 @@
 #define NinisBlood 11
 #define NoBlood 0xFF
 #define IsMajor 0x80
+
+
+//Definitions for Holy Blood presets
+
+//Example entry that i'm not removing
+#define DonateBlood 0
+
+//Archanea
+#define AnriBlood 1 
+#define AlteaBlood AnriBlood //Alias
+#define AdrahBlood 2 
+#define ArchaneaBlood AdrahBlood //Alias
+#define JiolBlood 3 
+#define GraBlood JiolBlood //Alias
+#define MarlonBlood 4 
+#define AurelisBlood MarlonBlood //Alias
+#define IoteBlood 5 
+#define MacedonBlood IoteBlood //Alias
+#define MostynBlood 6 
+#define TalysBlood MostynBlood //Alias
+#define MedeusBlood 7 
+#define DolhrBlood MedeusBlood //Alias
+
+//Valentia
+#define RigelBlood 8
+#define DumaBlood RigelBlood //Alias
+#define ZofiaBlood 9
+#define MilaBlood ZofiaBlood //Alias
+
+//Jugdral
+#define BaldrBlood 10
+#define OdBlood 11
+#define DainnBlood 12
+#define UlirBlood 13
+#define BragiBlood 14
+#define ThrudBlood 15
+#define FjalarBlood 16
+#define HezulBlood 17
+#define NjorunBlood 18
+#define NeirBlood 19
+#define NagaBlood 20
+#define ForsetiBlood 21
+#define LoptousBlood 22
+
+//Ylisse
+#define GrimaBlood 23
+
+
+
+
+
+
+
+
+
+
+
+#define NoBlood 0xFF
+#define IsMajor 0x80
+
