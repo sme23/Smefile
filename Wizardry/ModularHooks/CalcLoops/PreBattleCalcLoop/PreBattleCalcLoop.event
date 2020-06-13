@@ -17,18 +17,14 @@ BtlLoopParent:
 BtlLoopTable:
 POIN BC_DefRes BC_Power BC_ASpd BC_Hit BC_Avo BC_Crit BC_Dodge BC_Support BC_WRank BC_Status //these are the existing battle calculation routines
 
-#ifdef BIORHYTHM
   POIN BiorhythmFunc
-#endif //BIORHYTHM
 
 //add any new ones before here
 
 POIN SlowStatusEffect
 
-#ifdef CANNOT_CRIT
-	POIN NegateCritWeapons //This goes last, so that crit will always be set to 0 if set and never modified from there
-#endif // CANNOT_CRIT
 
+POIN NegateCritWeapons //This goes last, so that crit will always be set to 0 if set and never modified from there
 POIN 0
 
 
