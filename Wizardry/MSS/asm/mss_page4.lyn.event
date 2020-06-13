@@ -52,7 +52,7 @@ BYTE $6E $3E $0 $2
 POIN HolyBloodNameGetter
 BYTE $72 $3E $0 $2
 POIN HolyBloodVoracityGetter
-BYTE $6A $3E $0 $2 $BC $36 $0 $8
+BYTE $7A $3E $0 $2 $BC $36 $0 $8
 POIN SS_BiorhythmTextLink
 BYTE $7E $3E $0 $2
 POIN BiorhythmNameGetter

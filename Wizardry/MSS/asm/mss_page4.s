@@ -25,7 +25,7 @@ draw_textID_at 15, 7, colour=White, width=16
 blh HolyBloodVoracityGetter
 cmp r0,#0
 beq NoIconDraw
-draw_icon_at 11, 7, number=0xCB
+draw_icon_at 19, 7, number=0xCB
 NoIconDraw:
 
 
