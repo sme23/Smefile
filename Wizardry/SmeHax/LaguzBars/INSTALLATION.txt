@@ -2,10 +2,27 @@ INTALLATION INSTRUCTIONS:
 1. `#include "LaguzBars.event"` 
 2. add `POIN IncDecLaguzBarsPerBattle` to the Post-Battle Calc Loop
 3. add to their respective stat getters `(Stat_TransformBoost-1)` where `Stat` is the given stat for the getter (Str, Skl, Spd, Def, Res, Con, Mov, Mag)
-4. add the unit menu command for Transform, with `TransformUsability` and `TransformEffect` funcs
-5. "MSS code.txt" contains information on setting up bar on the stat screen
-6. add tables to the proper directory
-7. add untransformed/transformed class pairs to the list in LaguzBars.event
+4. In Debuffs, replace the procs with the following:
+```
+  ALIGN 4
+  MapMainClearProc:
+	WORD $02; POIN (UntransformTransformedLaguz|1)
+    WORD $02; POIN (ClearDebuffs|1)
+    WORD $02 $80155C5
+    WORD $0D $859A310
+
+  ALIGN 4
+  GameCtrlClearProc:
+	WORD $02; POIN (UntransformTransformedLaguz|1)
+    WORD $02; POIN (ClearDebuffs|1)
+    WORD $02 $8009D99
+    WORD $0D $8591924
+```
+5. add the unit menu command for Transform, with `TransformUsability` and `TransformEffect` funcs
+6. "MSS code.txt" contains information on setting up bar on the stat screen
+7. add tables to the proper directory
+8. add untransformed/transformed class pairs to the list in LaguzBars.event
+
 
 This hack does not control laguz weaponry, but you can do it very easily with class-based weapon locks & disallowing trading/removal of laguz weapons.
 

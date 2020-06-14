@@ -25,6 +25,7 @@ Armory(ArmoryItems,5,2)
 Village(0x8,VillageEvent,8,3)
 House(0,HouseEvent,4,2)
 Seize(25,6)
+Seize(11,3)
 END_MAIN
 
 MiscBasedEvents:
@@ -66,7 +67,7 @@ UNIT ONeill PegasusKnight 0x40 		Level(10,Enemy,1)   [17,4]  0 0 0 0 [SteelAxe, 
 UNIT Breguet EirikaLord 0x40 	Level(10,Enemy,1)   [20,2] 	0 0 0 0 [SteelLance, Javelin] AttackInRangeAI
 UNIT Bone Brigand 0x40 			Level(10,Enemy,1)   [19,7] 	0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
 UNIT Bazba Brigand 0x40 		Level(10,Enemy,1)   [21,9] 	0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
-UNIT Saar Knight 0x40 			Level(10,Enemy,1)   [18,8] 	0 0 0 0 [SteelLance, Javelin] AttackInRangeAI
+UNIT Saar Knight 0x40 			Level(10,Enemy,1)   [16,5] 	0 0 0 0 [SteelLance, Javelin] AttackInRangeAI
 UNIT Novala Shaman 0x40 		Level(10,Enemy,1)   [22,6]	0 0 0 0 [Nosferatu] AttackInRangeAI
 UNIT Murray Cavalier 0x40 		Level(10,Enemy,1)   [23,4] 	0 0 0 0 [SteelSword, Javelin] AttackInRangeAI
 UNIT Tirado General 0x40 		Level(10,Enemy,1)   [25,6] 	0 0 0 0 [SilverLance, Javelin] NeverMoveAI
@@ -92,10 +93,11 @@ NoFade
 ENDA
 
 EndingScene:
-ASMC 0x85C71 0x381F5 0x37CF9 //show records screen
-STAL 120
-EVBIT_F 0x2
-MNTS 0x1 //return to title screen
+MNC2 1
+//ASMC 0x85C71 0x381F5 0x37CF9 //show records screen
+//STAL 120
+//EVBIT_F 0x2
+//MNTS 0x1 //return to title screen
 NoFade
 ENDA
 

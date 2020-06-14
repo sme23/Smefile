@@ -71,7 +71,7 @@ mov r0,#1
 b ShopUnitUsability_GoBack
 
 ShopUnitUsability_RetFalse:
-mov r0,#0
+mov r0,#3
 
 ShopUnitUsability_GoBack:
 pop {r1}
@@ -118,7 +118,7 @@ cmp r0,#0
 beq IsUnitShopUnit_LoopFail
 cmp r0,r3
 beq IsUnitShopUnit_LoopSuccess
-add r2,#4
+add r2,#8
 b IsUnitShopUnit_LoopStart
 
 IsUnitShopUnit_LoopSuccess:
@@ -364,7 +364,7 @@ GetShopUnitInventoryAndType_LoopStart:
 ldrb r0,[r2]
 cmp r0,r3
 beq GetShopUnitInventoryAndType_EntryFound
-add r2,#4
+add r2,#8
 b GetShopUnitInventoryAndType_LoopStart
 
 GetShopUnitInventoryAndType_EntryFound:
@@ -377,9 +377,6 @@ bx r2
 
 .ltorg
 .align
-
-
-
 
 
 
