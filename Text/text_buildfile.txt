@@ -96,7 +96,11 @@ Ftg[X]
 
 ## FatigueDesc
 How tired this unit is.[N]
-Can't deploy if too high.[X]
+Can't deploy if bar is full,[N]
+but resets when undeployed.[X]
+
+## BowgunName
+Bowgun[X]
 
 
 #include "status_text.txt"
