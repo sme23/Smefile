@@ -1551,3 +1551,73 @@ bx r0
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+@ ======================================================
+@ ========= UNTRANSFORM AT THE END OF CHAPTERS =========
+@ ======================================================
+
+
+.global UntransformTransformedLaguz
+.type UntransformTransformedLaguz, %function
+
+
+UntransformTransformedLaguz:
+
+@we need to check for each player unit to see if they are transformed
+@if so, we need to untransform them
+@should be lib funcs for both of these, after getting each unit ptr
+@so we can setup a loop for this then
+
+push {r4-r7,r14}
+
+ldr r4,=#0x202BE4C @start of player unit structs
+mov r5,#0 @number of units checked so far
+
+UntransformTransformedLaguz_LoopStart:
+@have we checked every unit?
+cmp r5,#62
+beq UntransformTransformedLaguz_LoopExit
+
+@does unit exist?
+ldr r0,[r4]
+cmp r0,#0
+beq UntransformTransformedLaguz_LoopExit
+
+@is unit transformed?
+mov r0,r4
+bl IsLaguzTransformed
+cmp r0,#0
+beq UntransformTransformedLaguz_LoopRestart
+
+@untransform them
+mov r0,r4
+bl LaguzUntransform
+
+UntransformTransformedLaguz_LoopRestart:
+add r4,#0x48 @size of unit struct
+add r5,#1
+b UntransformTransformedLaguz_LoopStart
+
+
+UntransformTransformedLaguz_LoopExit:
+
+pop {r4-r7}
+mov r0,#0
+pop {r1}
+bx r1
+
+
+.ltorg
+.align
+
