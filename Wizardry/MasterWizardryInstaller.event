@@ -39,6 +39,9 @@ POP
 // Fix Gaining WExp if current is 0 by Stan
 #include "DependencyHacks/FixWpnRnk.event"
 
+// EMS by Stan
+#include "DependencyHacks/ExpandedModularSave/ExModularSave.event"
+
 //This isnt actually a dependency lol i just like it
 #include "DependencyHacks/DisplayWRankOnLevelUp/DisplayWRankOnLevelUp.event"
 
