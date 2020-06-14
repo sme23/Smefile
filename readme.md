@@ -12,7 +12,6 @@ Buildfile environment containing all of my various wizardry, installation-config
 - Give Unit Shop a proper targeting routine & set shop inventories & types per-unit
 - Implement proper soft weapon locks (will need modification to be ported back to skill system)
 - Either hack the event commands for changing allegiance to clear fatigue or just make an ASMC for clearing fatigue on a given unit
-- Fix standalone Canto & Canto+
 
 ## WIP
 
@@ -96,5 +95,4 @@ Buildfile environment containing all of my various wizardry, installation-config
 	- Run MiscBasedEvents every time you move a unit (unless this gets laggy)
 	- Looped function also checks for units 1 tile above, and displays an indicator over them if they can be talked to
 	- Map objects that activate when simply stepped upon in this mode and run events (running AFEVs & AREAs in this mode would probably be super laggy)
-	
 	
