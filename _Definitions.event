@@ -27,7 +27,7 @@
 // (which is sadly what the included table also does TODO: fix that)
 #define PassiveBoosts 0x80
 
-#define Bowgun (BlackGem+1)
+#define Bowgun (GoldGem+1)
 
 //Definitions for Holy Blood presets
 

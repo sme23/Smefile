@@ -4,6 +4,7 @@
 #include "FixedDamageWeapons.lyn.event"
 
 FixedDamageWeaponList:
+BYTE Bowgun
 BYTE 0
 
 

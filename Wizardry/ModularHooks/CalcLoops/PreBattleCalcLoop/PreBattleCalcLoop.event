@@ -25,6 +25,9 @@ POIN SlowStatusEffect
 
 
 POIN NegateCritWeapons //This goes last, so that crit will always be set to 0 if set and never modified from there
+
+POIN FixedDamageWeapons 
+
 POIN 0
 
 

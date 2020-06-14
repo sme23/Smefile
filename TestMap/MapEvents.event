@@ -62,7 +62,7 @@ UNIT Cormag WyvernRider 0x1 	Level(10,Ally,0)  	[7,7]  	0b 0x0 0x0 0x0 [0x14,0x6
 UNIT
 
 EnemyUnits:
-UNIT ONeill Fighter 0x40 		Level(10,Enemy,1)   [17,4]  0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
+UNIT ONeill PegasusKnight 0x40 		Level(10,Enemy,1)   [17,4]  0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
 UNIT Breguet EirikaLord 0x40 	Level(10,Enemy,1)   [20,2] 	0 0 0 0 [SteelLance, Javelin] AttackInRangeAI
 UNIT Bone Brigand 0x40 			Level(10,Enemy,1)   [19,7] 	0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
 UNIT Bazba Brigand 0x40 		Level(10,Enemy,1)   [21,9] 	0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
