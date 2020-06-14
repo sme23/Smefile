@@ -48,7 +48,7 @@
 .equ gMapRange,0x8029B98
 .equ ClearMapWith,0x80197E4
 .equ ForEachAdjacentUnit,0x8024F70
-.equ IsGeneratedTargetListEmpty,0x8029068
+.equ GetTargetListSize,0x804FD28
 .equ AddTargetListEntry,0x804F8BC @ arguments: r0 = x, r1 = y, r2 = unit allegience byte, r3 = trap type; returns: nothing
 .equ prTargetSelection_New,0x804FA3C
 .equ String_GetFromIndex,0x800a240
@@ -64,7 +64,7 @@ ShopUnitUsability:
 push {r14}
 @is the target list not empty?
 bl ShopUnit_MakeTargetList
-blh IsGeneratedTargetListEmpty
+blh GetTargetListSize
 cmp r0,#0
 beq ShopUnitUsability_RetFalse
 mov r0,#1
@@ -287,28 +287,17 @@ bx r1
 ShopUnit_OnSelection:
 push {r4,r14}
 mov r4,r1
-ldrb r0,[r4,#2]
-blh GetUnit
+
+bl ClearRangeMap
+bl ClearMoveMap
+
+@ldrb r0,[r4,#2]
+@blh GetUnit
 
 ldr r3,=#0x203A958 @action struct
 
-ldrb r1,[r0,#0x10]
-strb r1,[r3,#0x0E]
-
-ldrb r1,[r0,#0x11]
-strb r1,[r3,#0x0F]
-
 ldrb r0,[r4,#2]
 strb r0,[r3,#0x0D]
-
-ldr r0,=#0x3004E50 @active unit
-ldr r0,[r0]
-
-ldrb r1,[r0,#0x10]
-strb r1,[r3,#0x13]
-
-ldrb r1,[r0,#0x11]
-strb r1,[r3,#0x14]
 
 mov r0,#0x28
 strb r0,[r3,#0x11]
@@ -340,11 +329,14 @@ mov r4,r0 @r4 = target unit
 mov r0,r4
 bl GetShopUnitInventoryAndType
 
-mov r1,r0
 mov r2,r1
+mov r1,r0
+
 
 ldr r0,=#0x3004E50
 ldr r0,[r0]
+
+mov r3,#0
 
 blh MakeShop @r0 = visiting unit, r1 = shop list(?), r2 = shop type, r3 = ???
 
@@ -385,6 +377,9 @@ bx r2
 
 .ltorg
 .align
+
+
+
 
 
 
