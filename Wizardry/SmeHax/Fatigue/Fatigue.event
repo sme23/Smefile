@@ -21,6 +21,9 @@
 //Contains fatigue-restoring items
 #include "FatigueItems.lyn.event"
 
+//Contains ASMC for setting fatigue
+#include "FatigueASMC.lyn.event"
+
 //prep screen hooks
 PUSH
 ORG 0x957F8 //call of a function nonexistent in vanilla for deny deployment & restore fatigued if not deployed in the previous chapter
@@ -44,6 +47,9 @@ BYTE 0x3B
 ALIGN 4
 FatigueRestoredTextID:
 SHORT MessageFatigueRestored
+
+#define ClearFatigue(charID) "SVAL 1 charID; SVAL 2 0; ASMC SetFatigueASMC"
+#define SetFatigue(charID,ftgValue) "SVAL 1 charID; SVAL 2 ftgValue; ASMC SetFatigueASMC"
 
 
 ALIGN 4

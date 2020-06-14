@@ -8,9 +8,7 @@ Buildfile environment containing all of my various wizardry, installation-config
 
 ## To Fix
 
-- Give Unit Shop a proper targeting routine & set shop inventories & types per-unit
-- Either hack the event commands for changing allegiance to clear fatigue or just make an ASMC for clearing fatigue on a given unit
-
+- Nothing (known) at the moment
 
 ## WIP
 
@@ -21,6 +19,7 @@ Buildfile environment containing all of my various wizardry, installation-config
 ## Todo
 
 - Add glowy colors in battle to status rework
+- MMB modules for biorhythm, fatigue, laguz bars, and holy blood
 - Inverse weapon locks (anyone BUT defined char or class can wield)
 - Fatigue costs for combat arts, instead of durability costs
 - Expand sacred weapon battle music to arbitrary weapon/song ID pairs
@@ -95,4 +94,3 @@ Buildfile environment containing all of my various wizardry, installation-config
 	- Run MiscBasedEvents every time you move a unit (unless this gets laggy)
 	- Looped function also checks for units 1 tile above, and displays an indicator over them if they can be talked to
 	- Map objects that activate when simply stepped upon in this mode and run events (running AFEVs & AREAs in this mode would probably be super laggy)
-	
