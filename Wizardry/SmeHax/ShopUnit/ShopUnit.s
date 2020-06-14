@@ -38,12 +38,12 @@
 .type ActionShopUnit, %function
 
 
-.macro blh to,reg=r3
-push {r3}
-ldr r3,=\reg
-mov r14,r3
-pop {r3}
-.short 0xF800
+.macro blh to, reg=r3
+  push {\reg}
+  ldr \reg, =\to
+  mov lr, \reg
+  pop {\reg}
+  .short 0xf800
 .endm
 .equ gMapRange,0x8029B98
 .equ ClearMapWith,0x80197E4
@@ -91,7 +91,6 @@ ldrb r0,[r3,#0x10] @x
 ldrb r1,[r3,#0x11] @y
 
 ldr r2,=IsTargetShopUnit
-add r2,#1
 
 blh ForEachAdjacentUnit
 
