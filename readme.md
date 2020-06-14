@@ -9,9 +9,10 @@ Buildfile environment containing all of my various wizardry, installation-config
 ## To Fix
 
 - Make Fixed Damage Weapons re-calc effectiveness (verify working with eff rework as well)
-- Give Unit Shop a proper targeting routine & set shop inventories & types per-unit
 - Implement proper soft weapon locks (will need modification to be ported back to skill system)
+- Give Unit Shop a proper targeting routine & set shop inventories & types per-unit
 - Either hack the event commands for changing allegiance to clear fatigue or just make an ASMC for clearing fatigue on a given unit
+
 
 ## WIP
 
@@ -21,6 +22,7 @@ Buildfile environment containing all of my various wizardry, installation-config
 
 ## Todo
 
+- Add glowy colors in battle to status rework
 - Inverse weapon locks (anyone BUT defined char or class can wield)
 - Fatigue costs for combat arts, instead of durability costs
 - Expand sacred weapon battle music to arbitrary weapon/song ID pairs
