@@ -8,7 +8,6 @@ Buildfile environment containing all of my various wizardry, installation-config
 
 ## To Fix
 
-- Implement proper soft weapon locks (will need modification to be ported back to skill system)
 - Give Unit Shop a proper targeting routine & set shop inventories & types per-unit
 - Either hack the event commands for changing allegiance to clear fatigue or just make an ASMC for clearing fatigue on a given unit
 

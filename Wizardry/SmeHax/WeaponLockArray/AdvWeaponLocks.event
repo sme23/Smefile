@@ -19,9 +19,9 @@ POP
 #define EndLockArray 0
 
 TestArray:
-BYTE HardClassLock
-BYTE EirikaLord
-BYTE Rogue
+BYTE SoftCharLock
+BYTE Eirika
+BYTE Ephraim
 BYTE EndLockArray
 
 #endif // USE_WEAPON_LOCK_ARRAY
