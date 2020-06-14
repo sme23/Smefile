@@ -32,7 +32,7 @@ beq	End
 @check if attacked this turn
 ldrb  r0, [r6,#0x11]  @action taken this turn
 cmp r0, #0x04 @check if staff or attack was used
-blo End
+blt End
 cmp r0, #0x1E @check if found enemy in the fog
 beq End
 ldrb  r0, [r6,#0x0C]  @allegiance byte of the current character taking action
@@ -61,8 +61,8 @@ JumpLoad2:
 orr	r0,r1
 mov	r1,#2		@canto bit
 and	r0,r1
-cmp	r0,#2
-beq	CanCanto	@if the option is set and has the ability, skip skill check
+cmp	r0,r1
+bne	End	
 
 
 HasSkill:
@@ -81,6 +81,5 @@ bx	r0
 
 .ltorg
 .align
-
 
 
