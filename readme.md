@@ -25,9 +25,10 @@ Buildfile environment containing all of my various wizardry, installation-config
 - Expand sacred weapon battle music to arbitrary weapon/song ID pairs
 - Items addon for Laguz Bars
 - Buy-Only and Sell-Only shops (probably will need new text control codes)
-- Ledge terrain (if units can pass this terrain, they do so by jumping from one end to the other)
+- Rewrite super arena hack entirely
 - Jedah's thing where you're unable to attack, but you still initiate battle and just get a popup instead of actually attacking and your round is cancelled entirely unless the 4/8/12/16 requirement is met
 	- configurable the turns that are a multiple of 4 version or the every 4th attack version, though the latter will use 2 bits of debuff table space to track how many times you've been attacked
+- Ledge terrain (if units can pass this terrain, they do so by jumping from one end to the other)
 - Option for setting additional fatigue costs if a unit has holy blood / major blood
 
 ## Todo but afraid of doing because big menus and CHAX
