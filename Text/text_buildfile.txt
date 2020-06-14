@@ -102,6 +102,8 @@ but resets when undeployed.[X]
 ## BowgunName
 Bowgun[X]
 
+## ShopUnitTickerText
+Select a unit to shop with.[X]
 
 #include "status_text.txt"
 

@@ -106,7 +106,7 @@ UnitMenuTable:
   UM_Vendor
   UM_Secret
   
-  MenuCommand(UM_UnitShop, UM_UnitShopDesc, NormalText, ShopUnitCommandUsability, ShopUnitCommandEffect)
+  MenuCommand(UM_UnitShop, UM_UnitShopDesc, NormalText, ShopUnitUsability, ShopUnitEffect)
   
   UM_Arena
 	

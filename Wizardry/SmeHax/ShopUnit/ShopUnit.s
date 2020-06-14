@@ -1,251 +1,392 @@
+@i fucking give up i'm just starting this bitch over
+
 .thumb
 .align
 
-@function prototypes :3
 
-.global ShopUnitCommandUsability
-.type ShopUnitCommandUsability, %function
+.global ShopUnitUsability
+.type ShopUnitUsabiliy, %function
 
-.global ShopUnitCommandEffect
-.type ShopUnitCommandEffect, %function
+.global ShopUnitEffect
+.type ShopUnitEffect,%function
 
-.macro blh to, reg=r3
-  ldr \reg, =\to
-  mov lr, \reg
-  .short 0xf800
+.global ShopUnit_OnConstruction
+.type ShopUnit_OnConstruction, %function
+
+.global ShopUnit_DestructMoveDisplay
+.type ShopUnit_DestructMoveDisplay, %function
+
+.global ShopUnit_OnChange
+.type ShopUnit_OnChange, %function
+
+.global ShopUnit_OnSelection
+.type ShopUnit_OnSelection, %function
+
+.global ShopUnit_MakeTargetList
+.type ShopUnit_MakeTargetList, %function
+
+.global IsTargetShopUnit
+.type IsTargetShopUnit, %function
+
+.global IsUnitShopUnit
+.type IsUnitShopUnit, %function
+
+.global GetShopUnitInventoryAndType
+.type GetShopUnitInventoryAndType, %function
+
+.global ActionShopUnit
+.type ActionShopUnit, %function
+
+
+.macro blh to,reg=r3
+push {r3}
+ldr r3,=\reg
+mov r14,r3
+pop {r3}
+.short 0xF800
 .endm
-
-.equ GetUnit,0x8019430 @r0 = allegiance byte
-
-
-ShopUnitCommandUsability:
-push {r4-r7,r14}
-@ check for adjacent unit who matches an external ID
-ldr r0, =#0x3004E50 @active unit ptr
-ldr r0,[r0] @active unit struct
-mov r4,r0 @r4 = unit struct
-
-mov r0,r4
-bl FindFirstAdjacentShopUnit
-
-cmp r0,#0
-beq Usability_RetFalse
-
-mov r0,#1
-b Usability_GoBack
-
-Usability_RetFalse:
-mov r0,#3
-
-Usability_GoBack:
-pop {r4-r7}
-pop {r1}
-bx r1
-
-.ltorg
-.align
-
-
-FindFirstAdjacentShopUnit: @r0 = char struct, returns first adjacent shop unit or 0
-push {r4-r7,r14}
-mov r4,r0
-
-@get active unit coords
-ldrb r0,[r4,#0x10] @x coord
-ldrb r1,[r4,#0x11] @y coord
-mov r5,r0 @r5 = x coord
-mov r6,r1 @r6 = y coord
-
-CheckSpace1:
-mov r5,r0
-mov r6,r1
-add r0,#1
-
-ldr		r2,=#0x202E4D8	@Load the location in the table of tables of the map you want
-ldr		r2,[r2]			@Offset of map's table of row pointers
-lsl		r1,#0x2			@multiply y coordinate by 4
-add		r2,r1			@so that we can get the correct row pointer
-ldr		r2,[r2]			@Now we're at the beginning of the row data
-add		r2,r0			@add x coordinate
-ldrb	r0,[r2]			@load datum at those coordinates
-
-cmp r0,#0
-beq CheckSpace2
-ldr r1,=GetUnit
-mov r14,r1
-.short 0xF800
-cmp r0,#0
-beq CheckSpace2
-
-mov r7,r0 @r7 = target unit struct
-ldr r0,[r7] @target char data
-ldrb r0,[r0,#4] @target char ID
-ldr r2,=ShopUnitList
-
-CheckSpace1_LoopStart:
-ldrb r1,[r2]
-cmp r1,#0
-beq CheckSpace2
-cmp r1,r0
-beq CheckSpace1_RetTrue
-add r2,#1
-b CheckSpace1_LoopStart
-
-CheckSpace1_RetTrue:
-mov r0,r7
-b FindFirstUnit_GoBack
-
-
-CheckSpace2:
-mov r0,r5
-mov r1,r6
-add r1,#1
-
-ldr		r2,=#0x202E4D8	@Load the location in the table of tables of the map you want
-ldr		r2,[r2]			@Offset of map's table of row pointers
-lsl		r1,#0x2			@multiply y coordinate by 4
-add		r2,r1			@so that we can get the correct row pointer
-ldr		r2,[r2]			@Now we're at the beginning of the row data
-add		r2,r0			@add x coordinate
-ldrb	r0,[r2]			@load datum at those coordinates
-
-cmp r0,#0
-beq CheckSpace3
-ldr r1,=GetUnit
-mov r14,r1
-.short 0xF800
-cmp r0,#0
-beq CheckSpace3
-
-mov r7,r0 @r7 = target unit struct
-ldr r0,[r7] @target char data
-ldrb r0,[r0,#4] @target char ID
-ldr r2,=ShopUnitList
-
-CheckSpace2_LoopStart:
-ldrb r1,[r2]
-cmp r1,#0
-beq CheckSpace3
-cmp r1,r0
-beq CheckSpace2_RetTrue
-add r2,#1
-b CheckSpace2_LoopStart
-
-CheckSpace2_RetTrue:
-mov r0,r7
-b FindFirstUnit_GoBack
-
-
-CheckSpace3:
-mov r0,r5
-mov r1,r6
-sub r0,#1
-
-ldr		r2,=#0x202E4D8	@Load the location in the table of tables of the map you want
-ldr		r2,[r2]			@Offset of map's table of row pointers
-lsl		r1,#0x2			@multiply y coordinate by 4
-add		r2,r1			@so that we can get the correct row pointer
-ldr		r2,[r2]			@Now we're at the beginning of the row data
-add		r2,r0			@add x coordinate
-ldrb	r0,[r2]			@load datum at those coordinates
-
-cmp r0,#0
-beq CheckSpace4
-ldr r1,=GetUnit
-mov r14,r1
-.short 0xF800
-cmp r0,#0
-beq CheckSpace4
-
-mov r7,r0 @r7 = target unit struct
-ldr r0,[r7] @target char data
-ldrb r0,[r0,#4] @target char ID
-ldr r2,=ShopUnitList
-
-CheckSpace3_LoopStart:
-ldrb r1,[r2]
-cmp r1,#0
-beq CheckSpace4
-cmp r1,r0
-beq CheckSpace3_RetTrue
-add r2,#1
-b CheckSpace3_LoopStart
-
-CheckSpace3_RetTrue:
-mov r0,r7
-b FindFirstUnit_GoBack
-
-
-CheckSpace4:
-mov r0,r5
-mov r1,r6
-sub r1,#1
-
-ldr		r2,=#0x202E4D8	@Load the location in the table of tables of the map you want
-ldr		r2,[r2]			@Offset of map's table of row pointers
-lsl		r1,#0x2			@multiply y coordinate by 4
-add		r2,r1			@so that we can get the correct row pointer
-ldr		r2,[r2]			@Now we're at the beginning of the row data
-add		r2,r0			@add x coordinate
-ldrb	r0,[r2]			@load datum at those coordinates
-
-cmp r0,#0
-beq CheckSpaceEnd
-ldr r1,=GetUnit
-mov r14,r1
-.short 0xF800
-cmp r0,#0
-beq CheckSpaceEnd
-
-mov r7,r0 @r7 = target unit struct
-ldr r0,[r7] @target char data
-ldrb r0,[r0,#4] @target char ID
-ldr r2,=ShopUnitList
-
-CheckSpace4_LoopStart:
-ldrb r1,[r2]
-cmp r1,#0
-beq CheckSpaceEnd
-cmp r1,r0
-beq CheckSpace4_RetTrue
-add r2,#1
-b CheckSpace4_LoopStart
-
-CheckSpace4_RetTrue:
-mov r0,r7
-b FindFirstUnit_GoBack
-
-
-CheckSpaceEnd:
-mov r0,#0
-
-FindFirstUnit_GoBack:
-pop {r4-r7}
-pop {r1}
-bx r1
-
-.ltorg
-.align
-
-
+.equ gMapRange,0x8029B98
+.equ ClearMapWith,0x80197E4
+.equ ForEachAdjacentUnit,0x8024F70
+.equ IsGeneratedTargetListEmpty,0x8029068
+.equ AddTargetListEntry,0x804F8BC @ arguments: r0 = x, r1 = y, r2 = unit allegience byte, r3 = trap type; returns: nothing
+.equ prTargetSelection_New,0x804FA3C
+.equ String_GetFromIndex,0x800a240
+.equ prBottomHelpDisplay_New,0x8035708
+.equ gMapMovement,0x202E4E0
+.equ prMoveRange_HideGfx,0x0801DACC
+.equ prChangeActiveUnitFacing,0x801F50C @ arguments: r0 = xTarget, r1 = yTarget
+.equ GetUnit,0x8019430
 .equ MakeShop,0x80b4240 @r0 = visiting unit, r1 = shop list(?), r2 = shop type, r3 = ???
 
-ShopUnitCommandEffect:
-push {r4-r7,r14}
-ldr r0, =#0x3004E50 @active unit ptr
-ldr r0,[r0] @active unit struct
-mov r4,r0 @r4 = unit struct
 
-@set up shop
-mov r0,r4
-ldr r1,=ShopUnitShopList
-mov r2,#3
-ldr r3,=MakeShop
-mov r14,r3
-mov r3,#0
-.short 0xF800
+ShopUnitUsability:
+push {r14}
+@is the target list not empty?
+bl ShopUnit_MakeTargetList
+blh IsGeneratedTargetListEmpty
+cmp r0,#0
+beq ShopUnitUsability_RetFalse
+mov r0,#1
+b ShopUnitUsability_GoBack
 
-pop {r4-r7}
+ShopUnitUsability_RetFalse:
+mov r0,#0
+
+ShopUnitUsability_GoBack:
+pop {r1}
+bx r1
+
+.ltorg
+.align
+
+ShopUnit_MakeTargetList:
+push {r14}
+bl ClearRangeMap
+
+ldr r3,=#0x3004E50
+ldr r3,[r3]
+
+ldrb r0,[r3,#0x10] @x
+ldrb r1,[r3,#0x11] @y
+
+ldr r2,=IsTargetShopUnit
+add r2,#1
+
+blh ForEachAdjacentUnit
+
+bl ClearRangeMap
+
 pop {r0}
 bx r0
+
+.ltorg
+.align
+
+
+
+IsUnitShopUnit:
+push {r4,r14}
+mov r4,r0
+
+ldr r2,=ShopUnitList
+ldr r3,[r4]
+ldrb r3,[r3,#4]
+
+IsUnitShopUnit_LoopStart:
+ldrb r0,[r2]
+cmp r0,#0
+beq IsUnitShopUnit_LoopFail
+cmp r0,r3
+beq IsUnitShopUnit_LoopSuccess
+add r2,#4
+b IsUnitShopUnit_LoopStart
+
+IsUnitShopUnit_LoopSuccess:
+mov r0,#1
+b IsUnitShopUnit_GoBack
+
+IsUnitShopUnit_LoopFail:
+mov r0,#0
+
+IsUnitShopUnit_GoBack:
+pop {r4}
+pop {r1}
+bx r1
+
+.ltorg
+.align
+
+
+
+
+IsTargetShopUnit: @r0 = target unit ptr
+push {r4,r14}
+mov r4,r0
+
+@is unit a shop unit?
+mov r0,r4
+bl IsUnitShopUnit
+cmp r0,#0
+beq DontAddToTargetList
+
+@if so, add to target list
+ldrb r0,[r4,#0x10]
+ldrb r1,[r4,#0x11]
+ldrb r2,[r4,#0x0B]
+mov  r3,#0
+blh AddTargetListEntry
+
+DontAddToTargetList:
+
+pop {r4}
+pop {r0}
+bx r0
+
+.ltorg
+.align
+
+
+
+
+ClearRangeMap: @this is a stan func
+push {r14}
+ldr r0,=gMapRange
+ldr r0,[r0]
+mov r1,#0
+blh ClearMapWith
+pop {r0}
+bx r0
+
+.ltorg
+.align
+
+
+ClearMoveMap: @this is a stan func
+push {r14}
+ldr r3,=gMapMovement
+ldr r0,[r3]
+mov r1,#1
+neg r1,r1
+blh ClearMapWith
+pop {r0}
+bx r0
+
+.ltorg
+.align
+
+
+
+
+ShopUnitEffect:
+push {r14}
+
+@make target list
+bl ShopUnit_MakeTargetList
+
+@make target selection thing
+ldr r0,=ShopUnitTargetSelectionStruct
+blh prTargetSelection_New
+
+@ 0x01 = ???, 0x02 = Kill Menu, 0x04 = Beep Sound, 0x10 = Clear Menu Gfx
+mov r0, #0x17
+	
+pop {r1}
+bx r1
+
+.ltorg
+.align
+
+
+
+
+ShopUnit_OnConstruction:
+push {r4,r14}
+
+@save proc
+mov r4,r0
+
+ldr r0,=ShopUnitTickerTextLink
+ldrh r0,[r0]
+
+cmp r0,#0
+beq Constructor_SkipHelpText
+
+blh String_GetFromIndex
+
+mov r1,r0
+mov r0,r4
+blh prBottomHelpDisplay_New
+
+Constructor_SkipHelpText:
+
+pop {r4}
+pop {r1}
+bx r1
+
+.ltorg
+.align
+
+
+
+
+ShopUnit_DestructMoveDisplay:
+push {r14}
+
+bl ClearMoveMap
+blh prMoveRange_HideGfx
+mov r0,#0
+pop {r1}
+bx r1
+
+.ltorg
+.align
+
+
+
+
+ShopUnit_OnChange:
+push {r4,r14}
+
+ldrb r0,[r1,#0]
+ldrb r1,[r1,#1]
+
+blh prChangeActiveUnitFacing
+
+pop {r4}
+pop {r1}
+bx r1
+
+.ltorg
+.align
+
+
+
+
+
+
+ShopUnit_OnSelection:
+push {r4,r14}
+mov r4,r1
+ldrb r0,[r4,#2]
+blh GetUnit
+
+ldr r3,=#0x203A958 @action struct
+
+ldrb r1,[r0,#0x10]
+strb r1,[r3,#0x0E]
+
+ldrb r1,[r0,#0x11]
+strb r1,[r3,#0x0F]
+
+ldrb r0,[r4,#2]
+strb r0,[r3,#0x0D]
+
+ldr r0,=#0x3004E50 @active unit
+ldr r0,[r0]
+
+ldrb r1,[r0,#0x10]
+strb r1,[r3,#0x13]
+
+ldrb r1,[r0,#0x11]
+strb r1,[r3,#0x14]
+
+mov r0,#0x28
+strb r0,[r3,#0x11]
+
+mov r0,#0x16
+
+pop {r4}
+pop {r1}
+bx r1
+
+.ltorg
+.align
+
+
+
+
+
+ActionShopUnit:
+push {r4,r14}
+
+@we just need the shop stuff then to call the shop!
+
+ldr r0,=#0x203A958 @action struct
+ldrb r0,[r0,#0x0D]
+blh GetUnit
+
+mov r4,r0 @r4 = target unit
+
+mov r0,r4
+bl GetShopUnitInventoryAndType
+
+mov r1,r0
+mov r2,r1
+
+ldr r0,=#0x3004E50
+ldr r0,[r0]
+
+blh MakeShop @r0 = visiting unit, r1 = shop list(?), r2 = shop type, r3 = ???
+
+mov r0,#0
+pop {r4}
+pop {r1}
+bx r1
+
+.ltorg
+.align
+
+
+
+
+
+GetShopUnitInventoryAndType:
+push {r4,r14}
+mov r4,r0 
+
+ldr r3,[r4]
+ldrb r3,[r3,#4]
+ldr r2,=ShopUnitList
+
+GetShopUnitInventoryAndType_LoopStart:
+ldrb r0,[r2]
+cmp r0,r3
+beq GetShopUnitInventoryAndType_EntryFound
+add r2,#4
+b GetShopUnitInventoryAndType_LoopStart
+
+GetShopUnitInventoryAndType_EntryFound:
+ldr r0,[r2,#4]
+ldrb r1,[r2,#1]
+
+pop {r4}
+pop {r2}
+bx r2
+
+.ltorg
+.align
+
+
+
 
