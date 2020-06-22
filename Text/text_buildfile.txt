@@ -71,7 +71,7 @@ S W A R P[X]
 Fatigue restored[X]
 
 ## LaguzMSSName
-Bar[X]
+Trs[X]
 
 ## DonateToCirclesText
 Donate to Circles[X]
