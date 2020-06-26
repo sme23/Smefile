@@ -70,8 +70,37 @@ SHORT 0x211F //change 0xF bitmask to 0x1F bitmask
 ORG $178E6
 SHORT 0x211F //change 0xF bitmask to 0x1F bitmask
 
+ORG $25FC4 //restore staff targeting
+SHORT 0x201F //change 0xF bitmask to 0x1F bitmask
+
+ORG $2A8E4 //stone-related thing
+SHORT 0x06C0 //change left shift amount to 1 less bit (0x1B from 0x1C)
+SHORT 0x0EC0 //change right shift amount to 1 less bit (0x1B from 0x1C)
+
+ORG $2C88C
+SHORT 0x201F //change 0xF bitmask to 0x1F bitmask
+
+ORG $2AD98
+SHORT 0x06C0 //change left shift amount to 1 less bit (0x1B from 0x1C)
+SHORT 0x0EC0 //change right shift amount to 1 less bit (0x1B from 0x1C)
+
+ORG $2AE62
+SHORT 0x221F //change 0xF bitmask to 0x1F bitmask
+
+ORG $59A8C //something stone-related
+SHORT 0x211F //change 0xF bitmask to 0x1F bitmask
+
+ORG $569BA //stone-related thing
+SHORT 0x211F //change 0xF bitmask to 0x1F bitmask
+
+ORG $54A58 //probably the glow
+SHORT 0x06C0 //change left shift amount to 1 less bit (0x1B from 0x1C)
+SHORT 0x0EC0 //change right shift amount to 1 less bit (0x1B from 0x1C)
+
+
 ORG $178EA
 SHORT 0x21A0 //updated 5-turn duration on applied statuses
+
 
 ORG $88A3C
 jumpToHack(NewStatusDescIndexer)
@@ -86,9 +115,6 @@ POIN StatusNameTextIDTable
 
 ORG $276C0
 jumpToHack(NewBlinkyStatusIcons)
-
-ORG $25FC4 //restore staff targeting
-SHORT 0x201F
 
 POP
 
