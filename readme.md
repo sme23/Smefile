@@ -8,7 +8,7 @@ Buildfile environment containing all of my various wizardry, installation-config
 
 ## To Fix
 
-- Port back fixed hook for breakable terrain forcing map anims
+- Nothing (known) at the moment
 
 ## WIP
 
