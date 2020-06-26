@@ -99,7 +99,9 @@
 		jumpToHack(TrapRework_DoNewHideMapSprite)
 
 		ORG $57C20
-		jumpToHack(TrapRework_NewForceMapAnimsForTrap) 
+		SHORT 0x4A00 //ldr r2,=value just below
+		SHORT 0x4710 //bx r2
+		POIN TrapRework_NewForceMapAnimsForTrap
 
 		ORG $8CA3C
 		jumpToHack(TrapRework_NewTerrainHPDisplay) 
