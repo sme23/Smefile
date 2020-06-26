@@ -8,7 +8,7 @@ Buildfile environment containing all of my various wizardry, installation-config
 
 ## To Fix
 
-- Nothing (known) at the moment
+- Port back fixed hook for breakable terrain forcing map anims
 
 ## WIP
 
@@ -19,6 +19,7 @@ Buildfile environment containing all of my various wizardry, installation-config
 ## Todo
 
 - Add glowy colors in battle to status rework
+- Ballista expansion
 - MMB modules for biorhythm, fatigue, laguz bars, and holy blood
 - Inverse weapon locks (anyone BUT defined char or class can wield)
 - Fatigue costs for combat arts, instead of durability costs
