@@ -1,7 +1,5 @@
 #ifdef USE_SWARP
 
-ALIGN 4
-SwarpEffectWrapper:
-#incbin "StaffEffect.dmp"
+#include "Swarp.lyn.event"
 
 #endif // USE_SWARP

@@ -28,6 +28,8 @@
 #define PassiveBoosts 0x80
 
 #define Bowgun (GoldGem+1)
+#define Aum BlackGem
+#define Swarp GoldGem
 
 //Definitions for Holy Blood presets
 

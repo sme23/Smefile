@@ -13,7 +13,6 @@ Buildfile environment containing all of my various wizardry, installation-config
 ## WIP
 
 - Swarp staff
-- Final boss immunities (can be set per-character?)
 - Gaiden Megaquake (the SoV version that can't kill units)
 
 ## Todo

@@ -57,7 +57,7 @@ Juna Fruit,0x8028bf8,0x802a0f4,0x802905c,0x802ff70
 Latona,0x8028b98,0x802a100,0x8029014,0x802ff48
 Multi-Skill Scroll,0x8028c04,0x802a100,0x802905c,0x802ff76
 Aum,AumUsability|IsPointer,0x802a100,0x802905c,AumEffect|IsPointer
-Swarp,0x8028acc,0x802a100,0x8028fac,SwarpEffectWrapper|IsPointer
+Swarp,0x8028acc,0x802a100,0x8028fac,SwarpStaffEffect|IsPointer
 Fatigue Restoration Item,FatigueRestorationUsability|IsPointer,FatigueRestorationPrepUsability|IsPointer,0x802905c,FatigueRestoreEffect|IsPointer
 S Drink,FatigueRestorationUsability|IsPointer,FatigueRestorationPrepUsability|IsPointer,0x802905c,SDrinkEffect|IsPointer
 0x3d,0x8028c04,0x802a100,0x802905c,0x802ff76
