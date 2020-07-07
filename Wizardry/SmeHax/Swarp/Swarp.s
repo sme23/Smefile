@@ -97,7 +97,7 @@ strb r4,[r0,#0x10]
 strb r5,[r0,#0x11]
 
 ldr r1,=gTargetBattleUnit
-add r1,#0x74
+add r1,#0x73
 strb r2,[r1]
 add r3,#1
 strb r3,[r1]
