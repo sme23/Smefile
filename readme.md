@@ -17,12 +17,14 @@ Buildfile environment containing all of my various wizardry, installation-config
 
 ## Todo
 
+- Trap Rework 
+	- Modular Ballistae
+	- Modular decrement trap per turn/delete trap when 0
+	- Modular damage traps
 - MMB modules for biorhythm, fatigue, laguz bars, and holy blood
 - Inverse weapon locks (anyone BUT defined char or class can wield)
 - Fatigue costs for combat arts, instead of durability costs
 - Expand sacred weapon battle music to arbitrary weapon/song ID pairs
-- Items addon for Laguz Bars
-- Ballista expansion
 - Buy-Only and Sell-Only shops (probably will need new text control codes)
 - Rewrite super arena hack entirely
 - Jedah's thing where you're unable to attack, but you still initiate battle and just get a popup instead of actually attacking and your round is cancelled entirely unless the 4/8/12/16 requirement is met
