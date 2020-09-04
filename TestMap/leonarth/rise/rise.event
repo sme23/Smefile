@@ -1,0 +1,29 @@
+risingProc:
+_6C_CALL_ROUTINE(Anim_Setup2|1)
+_6C_LOOP_ROUTINE(Anim_LoadFrames2|1)
+_6C_CALL_ROUTINE(0x21668|1)
+_6C_END
+
+risingMisile:
+#incbin "startProc.dmp"
+POIN risingProc
+
+Anim_LoadFrames2:
+#incbin "looproutine.dmp"
+POIN riseimage1
+POIN riseimage2
+
+Anim_Setup2:
+#incbin "setup.dmp"
+POIN risepalette
+
+ALIGN 4
+riseimage1:
+#incext png2dmp "rise00.png"
+ALIGN 4
+riseimage2:
+#incext png2dmp "rise01.png"
+ALIGN 4
+risepalette:
+#incext png2dmp "rise00.png" --palette-only
+ALIGN 4

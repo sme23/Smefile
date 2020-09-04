@@ -1,0 +1,77 @@
+#ifndef RadarInstalled
+	#define RadarInstalled
+	#include "Extensions/Hack Installation.txt"
+	#define shopStock 0x9ba
+	#define maxAmountOfGoldReward 8000 //gold
+	#define rewardStartsDecreasingAt 20 //turns
+	#define amountToDecreaseGoldBy 500 //gold
+	#define minimumGoldReward 0 //gold
+	#define gaidenUnlockedIfUnder 20 //turns
+	
+	ALIGN 4
+	
+	ch6TurnCount:
+	#incbin "turnCount.dmp"
+	WORD maxAmountOfGoldReward
+	WORD rewardStartsDecreasingAt
+	WORD amountToDecreaseGoldBy
+	WORD minimumGoldReward
+	WORD gaidenUnlockedIfUnder
+	
+	//new trap, all it does is being visible in the minimap, ext1 is event id to turn it off from displaying in the minimap
+	ALIGN 4
+	newRadarTrap:
+	#incbin "placeRadar.dmp"
+	WORD 2 //trap id
+
+	#define placeRadar(XX,YY,eventID) "SVAL 1 XX; SVAL 2 YY; SVAL 3 eventID; ASMC newRadarTrap|1"
+	#define placeCross(XX,YY,eventID) "placeRadar(XX-1,YY-1,eventID); placeRadar(XX+1,YY-1,eventID); placeRadar(XX,YY,eventID); placeRadar(XX-1,YY+1,eventID); placeRadar(XX+1,YY+1,eventID)"
+	#define hiddenItem(eventID,itemID) "ENUF eventID; SVAL 3 itemID; ASMC hiddenItem|1; BEQ eventID 0xB 0x0; GIVEITEMTO 0xFFFF; ENUT eventID; LABEL eventID; NoFade; ENDA"
+	#define checkEnemy(XX,YY,eventID) "ENUF eventID; SVAL 1 XX; SVAL 2 YY; ASMC checkEnemy|1; BNE eventID 0xB 0x0; ENUT eventID; LABEL eventID; NoFade; ENDA"
+	
+	ALIGN 4
+	hiddenItem:
+	#incbin "hiddenItem.dmp"
+	checkEnemy:
+	#incbin "checkEnemy.dmp"
+	checkPieces:
+	#incbin "checkPieces.dmp"
+	every3Turns:
+	#incbin "every3Turns.dmp"
+	ALIGN 4
+	
+	//show the location of traps in the minimap
+	PUSH
+		ORG $A7A1A
+		SHORT 0xB408
+		jumpToHack(miniRadar)
+	POP
+	ALIGN 4
+	miniRadar:
+	#incbin "miniRadar.dmp"
+	WORD 0x31 //tile id
+	WORD 2 //trap id
+	
+	//make item run out of stock in shop
+	PUSH
+		ORG $B5464 //set to out of stock
+		jumpToHack(stockScroll)
+		ORG $B4188 //check if out of stock
+		jumpToHack(shopScroll)
+	POP
+	ALIGN 4
+	shopScroll:
+	#incbin "shopScroll.dmp"
+	WORD 0xa4 //item id
+	WORD 8 //event id
+	WORD shopStock //text id
+	stockScroll:
+	#incbin "stockScroll.dmp"
+	WORD 0xa4 //item id
+	WORD 8 //event id
+
+	#include "explosion/explosion.event"
+	#include "rise/rise.event"
+	#include "fall/fall.event"
+	
+#endif

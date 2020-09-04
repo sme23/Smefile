@@ -1,0 +1,29 @@
+fallingProc:
+_6C_CALL_ROUTINE(Anim_Setup3|1)
+_6C_LOOP_ROUTINE(Anim_LoadFrames3|1)
+_6C_CALL_ROUTINE(0x21668|1)
+_6C_END
+
+fallingMisile:
+#incbin "startProc.dmp"
+POIN fallingProc
+
+Anim_LoadFrames3:
+#incbin "looproutine.dmp"
+POIN fallimage1
+POIN fallimage2
+
+Anim_Setup3:
+#incbin "setup.dmp"
+POIN fallpalette
+
+ALIGN 4
+fallimage1:
+#incext png2dmp "fall00.png"
+ALIGN 4
+fallimage2:
+#incext png2dmp "fall01.png"
+ALIGN 4
+fallpalette:
+#incext png2dmp "fall00.png" --palette-only
+ALIGN 4

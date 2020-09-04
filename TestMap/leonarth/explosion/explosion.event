@@ -1,0 +1,407 @@
+#ifndef waitFrame
+	#define waitFrame "WORD 0 0 0"
+#endif
+#ifndef terminatorFrame
+	#define terminatorFrame "WORD 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF"
+#endif
+
+#ifndef installexp
+#define installexp
+
+#include "_6CDefinitions.event"
+//#include "StaffMapAnim/_MapAnim_6CRoutines.event"
+
+ALIGN 4
+
+explosiveProc:
+_6C_CALL_ROUTINE(Anim_Setup|1)
+_6C_LOOP_ROUTINE(Anim_LoadFrames|1)
+_6C_CALL_ROUTINE(0x21668|1)
+_6C_END
+
+ALIGN 4
+
+Anim_LoadFrames:
+#incbin "looproutine.dmp"
+ALIGN 4
+
+Anim_Setup:
+#incbin "setup.dmp"
+POIN expAnimation
+
+Anim_TileChange:
+#incbin "TileChange.dmp"
+ALIGN 4
+
+explosiveEnding:
+#incbin "startProc.dmp"
+POIN explosiveProc
+
+ALIGN 4
+
+//WIDTH * HEIGHT must not be bigger than 372
+//edit the SHORT value to add sound effects
+expAnimation:
+BYTE 18 16; SHORT 0xAB; POIN exp00image exp00palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp01image exp01palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp02image exp02palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0x2F3; POIN exp03image exp03palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp04image exp04palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp05image exp05palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp06image exp06palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp07image exp07palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp08image exp08palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp09image exp09palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp10image exp10palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp11image exp11palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp12image exp12palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp13image exp13palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp14image exp14palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp15image exp15palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp16image exp16palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp17image exp17palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp18image exp18palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp19image exp19palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp20image exp20palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp21image exp21palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp22image exp22palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp23image exp23palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp24image exp24palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp25image exp25palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp26image exp26palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp27image exp27palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp28image exp28palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp29image exp29palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp30image exp30palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp31image exp31palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp32image exp32palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp33image exp33palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp34image exp34palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp35image exp35palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp36image exp36palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp37image exp37palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp38image exp38palette
+waitFrame
+waitFrame
+BYTE 18 16; SHORT 0; POIN exp39image exp39palette
+waitFrame
+waitFrame
+terminatorFrame
+ALIGN 4
+exp00image:
+#incext png2dmp "exp00.png"
+ALIGN 4
+exp00palette:
+#incext png2dmp "exp00.png" --palette-only
+ALIGN 4
+exp01image:
+#incext png2dmp "exp01.png"
+ALIGN 4
+exp01palette:
+#incext png2dmp "exp01.png" --palette-only
+ALIGN 4
+exp02image:
+#incext png2dmp "exp02.png"
+ALIGN 4
+exp02palette:
+#incext png2dmp "exp02.png" --palette-only
+ALIGN 4
+exp03image:
+#incext png2dmp "exp03.png"
+ALIGN 4
+exp03palette:
+#incext png2dmp "exp03.png" --palette-only
+ALIGN 4
+exp04image:
+#incext png2dmp "exp04.png"
+ALIGN 4
+exp04palette:
+#incext png2dmp "exp04.png" --palette-only
+ALIGN 4
+exp05image:
+#incext png2dmp "exp05.png"
+ALIGN 4
+exp05palette:
+#incext png2dmp "exp05.png" --palette-only
+ALIGN 4
+exp06image:
+#incext png2dmp "exp06.png"
+ALIGN 4
+exp06palette:
+#incext png2dmp "exp06.png" --palette-only
+ALIGN 4
+exp07image:
+#incext png2dmp "exp07.png"
+ALIGN 4
+exp07palette:
+#incext png2dmp "exp07.png" --palette-only
+ALIGN 4
+exp08image:
+#incext png2dmp "exp08.png"
+ALIGN 4
+exp08palette:
+#incext png2dmp "exp08.png" --palette-only
+ALIGN 4
+exp09image:
+#incext png2dmp "exp09.png"
+ALIGN 4
+exp09palette:
+#incext png2dmp "exp09.png" --palette-only
+ALIGN 4
+exp10image:
+#incext png2dmp "exp10.png"
+ALIGN 4
+exp10palette:
+#incext png2dmp "exp10.png" --palette-only
+ALIGN 4
+exp11image:
+#incext png2dmp "exp11.png"
+ALIGN 4
+exp11palette:
+#incext png2dmp "exp11.png" --palette-only
+ALIGN 4
+exp12image:
+#incext png2dmp "exp12.png"
+ALIGN 4
+exp12palette:
+#incext png2dmp "exp12.png" --palette-only
+ALIGN 4
+exp13image:
+#incext png2dmp "exp13.png"
+ALIGN 4
+exp13palette:
+#incext png2dmp "exp13.png" --palette-only
+ALIGN 4
+exp14image:
+#incext png2dmp "exp14.png"
+ALIGN 4
+exp14palette:
+#incext png2dmp "exp14.png" --palette-only
+ALIGN 4
+exp15image:
+#incext png2dmp "exp15.png"
+ALIGN 4
+exp15palette:
+#incext png2dmp "exp15.png" --palette-only
+ALIGN 4
+exp16image:
+#incext png2dmp "exp16.png"
+ALIGN 4
+exp16palette:
+#incext png2dmp "exp16.png" --palette-only
+ALIGN 4
+exp17image:
+#incext png2dmp "exp17.png"
+ALIGN 4
+exp17palette:
+#incext png2dmp "exp17.png" --palette-only
+ALIGN 4
+exp18image:
+#incext png2dmp "exp18.png"
+ALIGN 4
+exp18palette:
+#incext png2dmp "exp18.png" --palette-only
+ALIGN 4
+exp19image:
+#incext png2dmp "exp19.png"
+ALIGN 4
+exp19palette:
+#incext png2dmp "exp19.png" --palette-only
+ALIGN 4
+exp20image:
+#incext png2dmp "exp20.png"
+ALIGN 4
+exp20palette:
+#incext png2dmp "exp20.png" --palette-only
+ALIGN 4
+exp21image:
+#incext png2dmp "exp21.png"
+ALIGN 4
+exp21palette:
+#incext png2dmp "exp21.png" --palette-only
+ALIGN 4
+exp22image:
+#incext png2dmp "exp22.png"
+ALIGN 4
+exp22palette:
+#incext png2dmp "exp22.png" --palette-only
+ALIGN 4
+exp23image:
+#incext png2dmp "exp23.png"
+ALIGN 4
+exp23palette:
+#incext png2dmp "exp23.png" --palette-only
+ALIGN 4
+exp24image:
+#incext png2dmp "exp24.png"
+ALIGN 4
+exp24palette:
+#incext png2dmp "exp24.png" --palette-only
+ALIGN 4
+exp25image:
+#incext png2dmp "exp25.png"
+ALIGN 4
+exp25palette:
+#incext png2dmp "exp25.png" --palette-only
+ALIGN 4
+exp26image:
+#incext png2dmp "exp26.png"
+ALIGN 4
+exp26palette:
+#incext png2dmp "exp26.png" --palette-only
+ALIGN 4
+exp27image:
+#incext png2dmp "exp27.png"
+ALIGN 4
+exp27palette:
+#incext png2dmp "exp27.png" --palette-only
+ALIGN 4
+exp28image:
+#incext png2dmp "exp28.png"
+ALIGN 4
+exp28palette:
+#incext png2dmp "exp28.png" --palette-only
+ALIGN 4
+exp29image:
+#incext png2dmp "exp29.png"
+ALIGN 4
+exp29palette:
+#incext png2dmp "exp29.png" --palette-only
+ALIGN 4
+exp30image:
+#incext png2dmp "exp30.png"
+ALIGN 4
+exp30palette:
+#incext png2dmp "exp30.png" --palette-only
+ALIGN 4
+exp31image:
+#incext png2dmp "exp31.png"
+ALIGN 4
+exp31palette:
+#incext png2dmp "exp31.png" --palette-only
+ALIGN 4
+exp32image:
+#incext png2dmp "exp32.png"
+ALIGN 4
+exp32palette:
+#incext png2dmp "exp32.png" --palette-only
+ALIGN 4
+exp33image:
+#incext png2dmp "exp33.png"
+ALIGN 4
+exp33palette:
+#incext png2dmp "exp33.png" --palette-only
+ALIGN 4
+exp34image:
+#incext png2dmp "exp34.png"
+ALIGN 4
+exp34palette:
+#incext png2dmp "exp34.png" --palette-only
+ALIGN 4
+exp35image:
+#incext png2dmp "exp35.png"
+ALIGN 4
+exp35palette:
+#incext png2dmp "exp35.png" --palette-only
+ALIGN 4
+exp36image:
+#incext png2dmp "exp36.png"
+ALIGN 4
+exp36palette:
+#incext png2dmp "exp36.png" --palette-only
+ALIGN 4
+exp37image:
+#incext png2dmp "exp37.png"
+ALIGN 4
+exp37palette:
+#incext png2dmp "exp37.png" --palette-only
+ALIGN 4
+exp38image:
+#incext png2dmp "exp38.png"
+ALIGN 4
+exp38palette:
+#incext png2dmp "exp38.png" --palette-only
+ALIGN 4
+exp39image:
+#incext png2dmp "exp39.png"
+ALIGN 4
+exp39palette:
+#incext png2dmp "exp39.png" --palette-only
+ALIGN 4
+#endif

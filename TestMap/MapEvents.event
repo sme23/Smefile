@@ -1,4 +1,6 @@
 
+#include "leonarth/leonarth.event"
+
 EventPointerTable(0x7, PointerList)
 
 PointerList:
@@ -92,6 +94,9 @@ LOAD1 0 PlayerUnits
 ENUN
 LOAD1 0 EnemyUnits
 ENUN
+FADU 10
+ASMC explosiveEnding|1
+
 NoFade
 ENDA
 
